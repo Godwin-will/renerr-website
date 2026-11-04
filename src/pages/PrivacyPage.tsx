@@ -44,7 +44,7 @@ export const PrivacyPage: React.FC = () => {
               <h2 className="text-lg font-bold text-brand-dark">1. Information We Collect</h2>
               <p>
                 We collect personal and organisational information only when you voluntarily submit
-                it to us through our website contact channels, school registration questionnaire, or
+                it to us through our website contact channels, project questionnaire, or
                 partnership enquiry form. This may include:
               </p>
               <ul className="list-disc pl-5 space-y-1.5 text-brand-muted text-xs sm:text-sm">
@@ -53,18 +53,18 @@ export const PrivacyPage: React.FC = () => {
                   number, and professional job title.
                 </li>
                 <li>
-                  <strong>Institutional information:</strong> School or organisation name,
-                  educational category, location (State, Town/LGA in Nigeria), and existing power
+                  <strong>Institutional or facility information:</strong> Organisation or facility name,
+                  sector category, location (State, Town/LGA or country), and existing power
                   supply status.
                 </li>
                 <li>
-                  <strong>Technical context:</strong> Energy challenges, priority appliances to be
+                  <strong>Technical context:</strong> Energy challenges, priority equipment or loads to be
                   powered, and brief project notes.
                 </li>
               </ul>
               <p className="text-xs text-brand-muted italic">
-                * We do not collect student personal records, sensitive financial payment details, or
-                unnecessary personal identification numbers through this public website.
+                * We do not collect student records, sensitive personal financial numbers, or
+                unnecessary identification documents through this public website.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ export const PrivacyPage: React.FC = () => {
               <h2 className="text-lg font-bold text-brand-dark">2. Why We Collect Information</h2>
               <p>We use the submitted information strictly for legitimate business purposes:</p>
               <ul className="list-disc pl-5 space-y-1.5 text-brand-muted text-xs sm:text-sm">
-                <li>To evaluate potential feasibility for school solar electrification projects.</li>
+                <li>To evaluate potential feasibility for energy access and renewable power projects.</li>
                 <li>To respond to your partnership, financing, or engineering inquiries.</li>
                 <li>
                   To schedule follow-up technical discussions and preliminary energy audits where

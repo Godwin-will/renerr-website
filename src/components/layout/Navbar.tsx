@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight, Sun, Mail } from 'lucide-react';
+import { Menu, X, ArrowRight, Mail, Globe } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { siteConfig } from '../../config/siteConfig';
 
@@ -25,32 +25,33 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Our Solution', path: '/solution' },
-    { name: 'Who We Serve', path: '/who-we-serve' },
     { name: 'About Us', path: '/about' },
+    { name: 'Our Approach', path: '/approach' },
+    { name: 'Our Impact', path: '/impact' },
     { name: 'Partner With Us', path: '/partner' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <>
-      {/* Top Banner Notice: School Program Focus */}
+      {/* Top Banner Notice: African Energy Access Mission */}
       <div className="bg-brand-dark text-brand-cream text-xs py-2 px-4 border-b border-brand-primary/30">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-primary text-brand-accent">
-              School Initiative
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-primary text-brand-accent">
+              <Globe className="w-3 h-3" />
+              Pan-African Energy Access
             </span>
             <span className="text-gray-300">
-              Exploring zero-upfront-cost solar energy for Nigerian schools.
+              Working to reduce energy poverty and expand electricity access across Africa.
             </span>
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <Link
-              to="/schools"
+              to="/partner"
               className="text-brand-accent hover:underline font-medium inline-flex items-center gap-1"
             >
-              Register School Interest <ArrowRight className="w-3 h-3" />
+              Explore Partnerships <ArrowRight className="w-3 h-3" />
             </Link>
             {siteConfig.contact.email && (
               <a
@@ -99,10 +100,10 @@ export const Navbar: React.FC = () => {
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                to="/schools"
-                className="px-4 py-2 text-sm font-medium text-brand-primary border border-brand-primary/40 hover:border-brand-primary rounded-lg transition-colors bg-white hover:bg-brand-light/30"
+                to="/about"
+                className="px-4 py-2 text-sm font-medium text-brand-dark hover:text-brand-primary rounded-lg transition-colors"
               >
-                For Schools
+                Our Mission
               </Link>
               <Link
                 to="/partner"
@@ -158,24 +159,23 @@ export const Navbar: React.FC = () => {
 
               <div className="pt-4 border-t border-brand-light space-y-2">
                 <Link
-                  to="/schools"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-brand-primary border border-brand-primary bg-brand-light/30 hover:bg-brand-light"
-                >
-                  <Sun className="w-4 h-4 text-brand-primary" />
-                  <span>Register School Interest</span>
-                </Link>
-                <Link
                   to="/partner"
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-brand-dark bg-brand-accent hover:bg-[#a6dc70] shadow-sm"
                 >
                   <span>Partner With Us</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
+                <Link
+                  to="/contact"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-brand-primary border border-brand-primary/30 hover:bg-brand-light"
+                >
+                  <span>Contact Us</span>
+                </Link>
               </div>
 
               {/* Mobile Quick Contact */}
               <div className="pt-3 text-xs text-brand-muted text-center space-y-1">
-                <p>Clean electricity for Nigerian schools & communities.</p>
+                <p>Reducing energy poverty across Africa.</p>
                 {siteConfig.contact.email && (
                   <p>
                     <a

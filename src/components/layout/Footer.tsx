@@ -6,7 +6,7 @@ import {
   MessageCircle,
   MapPin,
   ArrowUp,
-  ShieldCheck,
+  Globe2,
   ExternalLink,
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
   const hasWhatsapp = Boolean(siteConfig.contact.whatsappNumber);
   const whatsappUrl = hasWhatsapp
     ? `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-        'Hello Renerr Energies, I would like to inquire about your solar energy services.'
+        'Hello Renerr Energies, I would like to inquire about your energy access initiatives.'
       )}`
     : null;
 
@@ -37,10 +37,13 @@ export const Footer: React.FC = () => {
                 Collaborative Energy Access
               </p>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Let's make reliable electricity accessible to more people.
+                Building a Better Energy Future Takes All of Us.
               </h3>
               <p className="text-sm text-gray-300 mt-1 max-w-xl">
-                Partner with us to deploy sustainable, zero-upfront-cost solar energy projects for schools and communities across Nigeria.
+                We believe meaningful progress on energy access depends on collaboration. We welcome
+                conversations with organisations, institutions, investors, technical experts, and
+                communities that share our ambition to reduce energy poverty and expand access to
+                reliable electricity.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
@@ -48,13 +51,13 @@ export const Footer: React.FC = () => {
                 to="/partner"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
               >
-                Partner With Us
+                Explore Partnerships
               </Link>
               <Link
-                to="/schools"
+                to="/contact"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors text-center"
               >
-                Register School
+                Contact Us
               </Link>
             </div>
           </div>
@@ -68,55 +71,51 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <Logo variant="light" size="lg" />
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm mt-3">
-              Renerr Energies Ltd is a Nigerian renewable energy company developing accessible solar
-              solutions for schools and underserved communities using an energy-as-a-service model.
+              Renerr Energies Ltd is an African energy-access company working to reduce energy
+              poverty and expand access to affordable, reliable electricity across Africa through
+              practical solutions, innovation, and strategic partnerships.
             </p>
             <div className="flex items-center gap-2 text-xs text-brand-accent bg-white/5 border border-white/10 rounded-lg p-3 max-w-sm">
-              <ShieldCheck className="w-5 h-5 flex-shrink-0 text-brand-accent" />
+              <Globe2 className="w-5 h-5 flex-shrink-0 text-brand-accent" />
               <span>
-                Energy-as-a-service model designed to remove upfront cost barriers for schools.
+                Committed to expanding energy access and unlocking human potential across Africa.
               </span>
             </div>
           </div>
 
-          {/* Column 3: Solutions & Programs */}
+          {/* Column 3: Approach & Solutions */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Solutions
+              Our Approach
             </h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link to="/solution" className="hover:text-white transition-colors">
-                  Energy-as-a-Service
+                <Link to="/approach" className="hover:text-white transition-colors">
+                  Overview & Methodology
                 </Link>
               </li>
               <li>
-                <Link to="/schools" className="hover:text-white transition-colors">
-                  School Electrification
+                <Link to="/approach#pillars" className="hover:text-white transition-colors">
+                  Four Strategic Pillars
                 </Link>
               </li>
               <li>
-                <Link to="/solution#how-it-works" className="hover:text-white transition-colors">
-                  How It Works
+                <Link to="/approach#solutions" className="hover:text-white transition-colors">
+                  Flexible Energy Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/solution#faq" className="hover:text-white transition-colors">
-                  Model & FAQs
-                </Link>
-              </li>
-              <li>
-                <Link to="/who-we-serve" className="hover:text-white transition-colors">
-                  Who We Serve
+                <Link to="/approach#faq" className="hover:text-white transition-colors">
+                  Approach & Delivery FAQ
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Company & Partnerships */}
+          {/* Column 4: Impact & Company */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Company
+              Impact & Company
             </h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -125,18 +124,23 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/about#beliefs" className="hover:text-white transition-colors">
+                  What We Believe
+                </Link>
+              </li>
+              <li>
+                <Link to="/about#values" className="hover:text-white transition-colors">
+                  Our Values
+                </Link>
+              </li>
+              <li>
+                <Link to="/impact" className="hover:text-white transition-colors">
+                  Our Impact Ambition
+                </Link>
+              </li>
+              <li>
                 <Link to="/partner" className="hover:text-white transition-colors">
-                  Partner Pathways
-                </Link>
-              </li>
-              <li>
-                <Link to="/about#mission" className="hover:text-white transition-colors">
-                  Mission & Values
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
-                  Contact Us
+                  Partner With Us
                 </Link>
               </li>
               <li>
@@ -207,7 +211,7 @@ export const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-white/10 text-xs text-gray-400 leading-relaxed">
           <p className="max-w-4xl">
             <span className="text-gray-300 font-semibold">Important Notice: </span>
-            {siteConfig.disclaimers.schoolsZeroUpfront} {siteConfig.disclaimers.prospectivePartnerships}
+            {siteConfig.disclaimers.generalNotice} {siteConfig.disclaimers.partnerships}
           </p>
         </div>
 

@@ -1,28 +1,31 @@
 /**
  * Centralized Site Configuration for Renerr Energies Ltd
  * 
- * Founders/Administrators: Update your business details and form endpoints here.
- * When values are left empty or as placeholders, the website gracefully adapts:
- * - Hides non-existent social links
- * - Provides mailto / direct communication alternatives
- * - Clearly guides users without inventing fake addresses, phone numbers, or partnerships
+ * Enduring Identity:
+ * An African energy-access company working to reduce energy poverty
+ * and expand access to affordable, reliable electricity.
  */
 
 export interface SiteConfig {
   companyName: string;
   shortName: string;
   country: string;
+  region: string;
   siteUrl: string;
+  coreMessage: string;
   tagline: string;
   mission: string;
   vision: string;
+  guidingBelief: string;
+  brandPromise: string;
+  approach: string;
   
-  // Contact details (Leave empty if not yet active; website will adapt)
+  // Contact details (Configurable by founder)
   contact: {
     email: string;
     phone: string;
-    whatsappNumber: string; // E.g. "2348000000000" (digits only, no '+' for WhatsApp link)
-    addressDisplay: string; // e.g., "Lagos, Nigeria" or "Nigeria" (not fabricated)
+    whatsappNumber: string; // International format digits only (e.g. "2348000000000")
+    addressDisplay: string;
     officeHours: string;
   };
 
@@ -33,18 +36,16 @@ export interface SiteConfig {
   };
 
   // Form handling configuration
-  // You can paste your Formspree / Web3Forms / Cloudflare Worker endpoint here.
-  // If left empty, forms will offer a verified "Email Directly" or "WhatsApp Message" fallback.
   forms: {
-    partnerFormEndpoint: string; // e.g. "https://formspree.io/f/your_form_id"
-    schoolFormEndpoint: string;  // e.g. "https://formspree.io/f/your_form_id"
+    partnerFormEndpoint: string;
+    projectFormEndpoint: string;
     contactFormEndpoint: string;
   };
 
-  // Standard legal disclaimers
+  // Standard legal notices & disclaimers
   disclaimers: {
-    schoolsZeroUpfront: string;
-    prospectivePartnerships: string;
+    generalNotice: string;
+    partnerships: string;
   };
 }
 
@@ -52,35 +53,37 @@ export const siteConfig: SiteConfig = {
   companyName: "Renerr Energies Ltd",
   shortName: "Renerr",
   country: "Nigeria",
+  region: "Africa",
   siteUrl: "https://renerrenergies.com",
-  tagline: "Powering a Brighter Future for Africa",
-  mission: "To make affordable and reliable electricity accessible to everyone, starting in Nigeria and expanding across Africa.",
-  vision: "An Africa where energy poverty no longer limits education, economic opportunity, or human potential.",
+  coreMessage: "Powering a future where everyone has access to reliable electricity.",
+  tagline: "Powering a Brighter Energy Future for Africa",
+  mission: "To reduce energy poverty and expand access to affordable, reliable electricity across Africa through practical solutions, innovation, and strategic partnerships.",
+  vision: "An Africa where access to reliable electricity enables every individual, household, business, and community to realise its full potential.",
+  guidingBelief: "We believe that reliable electricity is fundamental to human progress and that access to energy should not be determined solely by income or geography.",
+  brandPromise: "Working to make reliable electricity more accessible, affordable, and sustainable for the people and communities who need it.",
+  approach: "We explore and develop practical energy solutions, innovative business models, and strategic partnerships that can help close Africa's electricity access gap and support long-term development.",
   
   contact: {
-    // Leave as empty strings until official accounts are set up by founder
-    email: "info@renerrenergies.com", // Founders can replace with primary email
-    phone: "", // Replace with official phone when active
-    whatsappNumber: "", // Replace with WhatsApp business phone digits (e.g. "2348012345678")
-    addressDisplay: "Operating across Nigeria",
+    email: "info@renerrenergies.com",
+    phone: "",
+    whatsappNumber: "",
+    addressDisplay: "Headquartered in Nigeria • Operating with an Africa-wide vision",
     officeHours: "Monday – Friday: 8:00 AM – 5:00 PM (WAT)",
   },
 
   social: {
-    linkedin: "", // Add company LinkedIn URL when live
-    twitter: "",  // Add company X/Twitter URL when live
+    linkedin: "",
+    twitter: "",
   },
 
   forms: {
-    // Add your Formspree endpoint (e.g. "https://formspree.io/f/xyz") or leave empty
-    // When empty, the form will guide the user to generate an email or direct enquiry
     partnerFormEndpoint: "",
-    schoolFormEndpoint: "",
+    projectFormEndpoint: "",
     contactFormEndpoint: "",
   },
 
   disclaimers: {
-    schoolsZeroUpfront: "Availability is subject to site assessment, project financing, eligibility, and agreed service terms.",
-    prospectivePartnerships: "Renerr Energies is currently developing project pipelines and actively engaging prospective technical, financial, and institutional partners.",
+    generalNotice: "Renerr Energies develops projects tailored to specific energy needs, local conditions, and feasibility assessments.",
+    partnerships: "Renerr Energies actively collaborates with technical specialists, investors, development finance institutions, public agencies, and communities to expand energy access.",
   }
 };

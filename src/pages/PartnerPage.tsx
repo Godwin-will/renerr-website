@@ -5,7 +5,7 @@ import {
   Wrench,
   TrendingUp,
   Landmark,
-  GraduationCap,
+  Building2,
   Globe2,
   CheckCircle2,
   AlertCircle,
@@ -14,6 +14,7 @@ import {
   Copy,
   ArrowRight,
   ShieldCheck,
+  Users,
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { handleFormSubmission, FormSubmissionResult } from '../utils/formHandler';
@@ -25,7 +26,7 @@ export const PartnerPage: React.FC = () => {
     organisation: '',
     workEmail: '',
     phone: '',
-    category: 'Technical & Implementation Partner',
+    category: 'Technical & Technology Partners',
     description: '',
     consent: false,
   });
@@ -36,17 +37,19 @@ export const PartnerPage: React.FC = () => {
   const [copiedSummary, setCopiedSummary] = useState(false);
 
   const categories = [
-    'Technical & Implementation Partner (EPC / Engineering)',
-    'Project Development Partner',
-    'Financing & Investment Partner',
-    'Institutional & School Partner',
-    'Development & Public-Sector Partner',
+    'Technical & Technology Partners',
+    'Project Development & Implementation Partners',
+    'Investors & Financing Institutions',
+    'Development Organisations & Funding Programmes',
+    'Government & Public-Sector Institutions',
+    'Commercial & Institutional Customers',
+    'Community & Civil-Society Partners',
   ];
 
   const validate = () => {
     const errs: Record<string, string> = {};
     if (!formData.fullName.trim()) errs.fullName = 'Full name is required.';
-    if (!formData.organisation.trim()) errs.organisation = 'Organisation name is required.';
+    if (!formData.organisation.trim()) errs.organisation = 'Organisation or institution is required.';
     if (!formData.workEmail.trim()) {
       errs.workEmail = 'Work email is required.';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.workEmail)) {
@@ -97,22 +100,33 @@ export const PartnerPage: React.FC = () => {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-semibold uppercase tracking-wider">
               <Handshake className="w-3.5 h-3.5" />
-              <span>Collaborative Ecosystem</span>
+              <span>Partnership & Ecosystem</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Partner With Renerr to Expand Energy Access.
+              Let's Expand Energy Access Together.
             </h1>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Renerr Energies is developing a scalable approach to making solar electricity more
-              accessible to schools and underserved customers. We believe the strongest projects are
-              built through collaboration between capable technical partners, project developers,
-              financiers, institutions, and communities.
-            </p>
+            <div className="space-y-3 text-base sm:text-lg text-gray-300 leading-relaxed">
+              <p>
+                Reducing energy poverty requires collaboration across sectors, disciplines, and
+                communities.
+              </p>
+              <p className="text-sm sm:text-base text-gray-300">
+                Renerr Energies welcomes opportunities to work with organisations that can contribute
+                expertise, technology, financing, project development capabilities, institutional
+                support, and local knowledge.
+              </p>
+              <p className="text-sm sm:text-base text-gray-300">
+                We are interested in building relationships that help identify energy-access
+                challenges, develop viable projects, mobilise resources, and expand access to
+                reliable electricity across Africa.
+              </p>
+            </div>
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none" />
       </section>
 
-      {/* 5 Partnership Pathways */}
+      {/* 7 Partnership Categories */}
       <section className="py-20 bg-white border-b border-brand-dark/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
@@ -120,48 +134,48 @@ export const PartnerPage: React.FC = () => {
               Collaboration Pathways
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight">
-              Where Your Expertise Fits Into the Solution
+              How We Collaborate
             </h2>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed">
-              We collaborate on project identification, feasibility analysis, innovative financing
-              structures, engineering implementation, and scaling viable clean energy assets.
+              We seek strategic alignment across seven key partner segments to originate, structure,
+              and deliver impactful energy access initiatives.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Pathway 1 */}
+            {/* Category 1 */}
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center">
                   <Wrench className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">
-                  1. Technical & Implementation Partners
+                  1. Technical & Technology Partners
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For solar EPC companies, electrical engineering firms, system integrators, and
-                  certified maintenance providers seeking pipeline installation and field service
-                  contracts.
+                  For solar EPC companies, electrical engineering firms, hardware OEMs, and system
+                  integrators interested in project execution, quality engineering, and ongoing field
+                  maintenance.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
-                Design &bull; Procurement &bull; EPC Delivery
+                Engineering &bull; Procurement &bull; EPC Delivery
               </div>
             </div>
 
-            {/* Pathway 2 */}
+            {/* Category 2 */}
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl bg-brand-dark text-brand-accent flex items-center justify-center">
                   <Globe2 className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">
-                  2. Project Development Partners
+                  2. Project Development & Implementation
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For clean-tech developers and advisory organisations that can contribute project
-                  origination, feasibility assessment, regulatory navigation, and deployment
-                  experience.
+                  For clean-energy project originators, environmental and social consultants, and
+                  deployment specialists who can contribute feasibility assessments and site
+                  development expertise.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
@@ -169,86 +183,101 @@ export const PartnerPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Pathway 3 */}
+            {/* Category 3 */}
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center">
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">
-                  3. Financing & Investment Partners
+                  3. Investors & Financing Institutions
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For impact investors, development finance institutions (DFIs), blended finance
-                  facilities, commercial lenders, and grant providers interested in supporting
-                  sustainable distributed solar assets.
+                  For impact investors, development finance institutions (DFIs), commercial lenders,
+                  and blended-finance facilities seeking commercially sound distributed energy assets
+                  in Africa.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
-                Impact Capital &bull; Concessional Debt &bull; Equity
+                Impact Capital &bull; Debt &bull; Equity Facilities
               </div>
             </div>
 
-            {/* Pathway 4 */}
+            {/* Category 4 */}
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl bg-brand-dark text-brand-cream flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5" />
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">
-                  4. Institutional & School Partners
+                  4. Development Organisations & Donors
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For school proprietors, education boards, multi-campus institutions, and education
-                  advocacy bodies ready to explore reliable solar energy under a predictable
-                  energy-as-a-service model.
+                  For international donor agencies, philanthropic foundations, and climate-access
+                  funds working to advance clean energy transition, digital inclusion, and community
+                  resilience.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
-                Multi-Campus Portfolios &bull; Institutional Clusters
+                Grant Programmes &bull; Catalytic Facilities
               </div>
             </div>
 
-            {/* Pathway 5 */}
+            {/* Category 5 */}
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
                   <Landmark className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">
-                  5. Development & Public-Sector Partners
+                  5. Government & Public-Sector Institutions
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For international development agencies, government energy-access initiatives, and
-                  civil society programmes working to expand clean electricity access and empower
-                  youth across Nigeria.
+                  For rural electrification authorities, state energy ministries, and public agencies
+                  interested in public-private models that accelerate access in underserved regions.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
-                Public Energy Transition &bull; Capacity Building
+                Public Policy &bull; Regional Electrification
               </div>
             </div>
 
-            {/* Direct Contact Card */}
-            <div className="p-6 rounded-2xl bg-brand-dark text-white flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-accent">
-                  Direct Inquiries
-                </span>
-                <h3 className="text-base font-bold text-white">Prefer a Direct Conversation?</h3>
-                <p className="text-xs text-gray-300 leading-relaxed">
-                  You can reach our leadership team directly via email or scheduled discussion to
-                  review bilateral opportunities.
+            {/* Category 6 */}
+            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-brand-dark">
+                  6. Commercial & Institutional Customers
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  For school networks, healthcare systems, agricultural processors, and multi-site
+                  commercial businesses seeking dependable, cost-effective energy solutions.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-white/10">
-                <a
-                  href={`mailto:${siteConfig.contact.email || 'info@renerrenergies.com'}`}
-                  className="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1"
-                >
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>{siteConfig.contact.email || 'info@renerrenergies.com'}</span>
-                </a>
+              <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
+                Portfolio Assessment &bull; Energy Service
+              </div>
+            </div>
+
+            {/* Category 7 */}
+            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 flex flex-col justify-between hover:border-brand-primary transition-all md:col-span-2 lg:col-span-3">
+              <div className="space-y-4 max-w-2xl">
+                <div className="w-10 h-10 rounded-xl bg-brand-dark text-brand-accent flex items-center justify-center">
+                  <Users className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-brand-dark">
+                  7. Community & Civil-Society Partners
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  For community associations, local cooperatives, and non-governmental organisations
+                  advocating for grassroots electricity access and productive energy use in rural and
+                  peri-urban Africa.
+                </p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary">
+                Community Engagement &bull; Social Inclusion
               </div>
             </div>
           </div>
@@ -261,18 +290,18 @@ export const PartnerPage: React.FC = () => {
           <div className="bg-white rounded-3xl p-8 sm:p-12 border border-brand-dark/10 shadow-sm space-y-8">
             <div className="space-y-2">
               <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
-                Initiate a Discussion
+                Start a Conversation
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
                 Partnership Enquiry Form
               </h2>
               <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                Please complete the details below. Our team reviews all partnership requests to
-                identify mutual alignment and schedule an introductory briefing.
+                Please complete the form below. Our leadership team reviews all partnership requests
+                to evaluate strategic alignment and initiate discussions.
               </p>
             </div>
 
-            {/* Submission Status Alert (Honest submission handling!) */}
+            {/* Submission Status Alert */}
             {submissionResult && (
               <div
                 className={`p-6 rounded-2xl border text-sm leading-relaxed space-y-4 ${
@@ -303,12 +332,10 @@ export const PartnerPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Direct dispatch options when using email fallback */}
                 {submissionResult.status === 'email_fallback_ready' && (
                   <div className="pt-3 border-t border-brand-primary/20 space-y-3">
                     <p className="text-xs text-brand-charcoal font-medium">
-                      Click below to send your pre-formatted enquiry directly using your email app,
-                      or copy the formatted text:
+                      Select how you would like to dispatch your pre-formatted enquiry:
                     </p>
                     <div className="flex flex-wrap items-center gap-3">
                       {submissionResult.mailtoUrl && (
@@ -360,7 +387,7 @@ export const PartnerPage: React.FC = () => {
                     id="fullName"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    placeholder="e.g. Adebayo Ogunlesi"
+                    placeholder="e.g. Dr. Amina Bello"
                     className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                       errors.fullName ? 'border-red-500 ring-1 ring-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                     }`}
@@ -378,7 +405,7 @@ export const PartnerPage: React.FC = () => {
                     id="organisation"
                     value={formData.organisation}
                     onChange={(e) => setFormData({ ...formData, organisation: e.target.value })}
-                    placeholder="e.g. Apex Solar Engineering Ltd"
+                    placeholder="e.g. Africa Clean Infrastructure Fund"
                     className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                       errors.organisation ? 'border-red-500 ring-1 ring-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                     }`}
@@ -449,7 +476,7 @@ export const PartnerPage: React.FC = () => {
                   rows={4}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Outline your organisation's capabilities, relevant geographic presence, and how you envision collaborating with Renerr Energies..."
+                  placeholder="Describe your organisation's background, relevant regional focus, and how you envision collaborating with Renerr Energies..."
                   className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                     errors.description ? 'border-red-500 ring-1 ring-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                   }`}

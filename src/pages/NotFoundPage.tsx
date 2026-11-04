@@ -28,10 +28,10 @@ export const NotFoundPage: React.FC = () => {
             <span>Return Home</span>
           </Link>
           <Link
-            to="/solution"
+            to="/approach"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold border border-brand-dark/20 text-brand-dark hover:bg-white transition-colors"
           >
-            <span>Our Solution</span>
+            <span>Our Approach</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

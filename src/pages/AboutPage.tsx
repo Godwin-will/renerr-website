@@ -10,7 +10,7 @@ import {
   HeartHandshake,
   ArrowRight,
   Sun,
-  UserCheck,
+  Globe2,
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/common/ImageWithFallback';
 
@@ -22,59 +22,56 @@ export const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-semibold uppercase tracking-wider">
-              <Sun className="w-3.5 h-3.5" />
+              <Globe2 className="w-3.5 h-3.5" />
               <span>About Renerr Energies Ltd</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Building an Energy Future That Includes Everyone.
+              Building a Future Where Energy Access Creates Opportunity.
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Founded on the belief that clean energy access should be a catalyst for education and
-              economic opportunity across Africa, starting with pragmatic solar solutions for
-              Nigerian schools.
+              Renerr Energies Ltd is an African energy-access company committed to reducing energy
+              poverty and expanding access to affordable, reliable electricity.
             </p>
           </div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none" />
       </section>
 
-      {/* Our Story & Origin */}
+      {/* Opening & Purpose */}
       <section className="py-20 bg-white border-b border-brand-dark/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-5">
               <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
-                Our Genesis & Purpose
+                Our Purpose
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight">
-                Bridging the Gap Between Abundant Sun and Real Energy Access
+                Energy Access as the Foundation of Progress
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-brand-charcoal/85 leading-relaxed">
                 <p>
-                  Across Nigeria and the wider African continent, solar irradiation is abundant, yet
-                  hundreds of thousands of schools, institutions, and communities struggle with
-                  persistent electricity deficits or depend on polluting, exorbitant generator
-                  fuel.
+                  We believe energy access is fundamental to progress. When people have access to
+                  reliable electricity, they have greater opportunities to learn, work, build
+                  businesses, access essential services, and improve their quality of life.
                 </p>
                 <p>
-                  <strong>Renerr Energies Ltd</strong> was established to bridge this contradiction.
-                  We recognized that the primary barrier preventing widespread solar adoption is not
-                  the technology itself, but the traditional requirement for massive upfront capital
-                  investment.
+                  Our purpose is to help expand those opportunities by developing practical energy
+                  solutions, exploring innovative approaches, and working with partners who share our
+                  commitment to a more inclusive energy future.
                 </p>
                 <p>
-                  By pioneering an <strong>energy-as-a-service model</strong>, Renerr aims to convert
-                  prohibitive capital costs into manageable operational subscriptions, starting with
-                  schools where dependable power immediately unlocks digital learning, administrative
-                  efficiency, and youth potential.
+                  Electricity should not be a privilege available only to people who can afford
+                  expensive infrastructure. Everyone deserves the opportunity to access reliable
+                  electricity, regardless of where they live or their economic circumstances. Renerr
+                  exists to help make that future possible.
                 </p>
               </div>
 
               <div className="pt-2">
                 <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10 text-xs text-brand-charcoal">
-                  <strong>Long-Term Ambition:</strong> To help expand access to clean electricity
-                  across Nigeria and Africa through partnerships, innovative financing structures, and
-                  fit-for-purpose renewable energy engineering.
+                  <strong>Permanent Mission, Flexible Execution:</strong> Our mission to reduce energy
+                  poverty remains constant, while our specific programmes, technologies, and
+                  commercial models evolve to match real-world needs.
                 </div>
               </div>
             </div>
@@ -83,14 +80,13 @@ export const AboutPage: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-brand-dark/10 shadow-lg bg-white p-2">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1548611716-ad383fb58cba?auto=format&fit=crop&w=900&q=80"
-                  alt="Solar engineering technicians reviewing renewable energy solar array installation"
-                  fallbackText="Clean Energy Engineering"
+                  alt="Clean energy engineers inspecting modern renewable energy equipment"
+                  fallbackText="Clean Energy Engineering & Field Development"
                   className="w-full h-80 sm:h-96 object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent flex items-end p-6">
                   <p className="text-xs text-white font-medium">
-                    Pragmatic solar engineering designed for resilience and local environmental
-                    conditions.
+                    Advancing sustainable energy infrastructure tailored to African realities.
                   </p>
                 </div>
               </div>
@@ -99,105 +95,197 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Deep Dive */}
-      <section className="py-20 bg-brand-cream border-b border-brand-dark/5" id="mission">
+      {/* Our Story */}
+      <section className="py-20 bg-brand-cream border-b border-brand-dark/5" id="story">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div className="space-y-3">
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
+              Our Story
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
+              Why Renerr Energies Was Founded
+            </h2>
+          </div>
+          <div className="space-y-4 text-sm sm:text-base text-brand-charcoal/85 leading-relaxed bg-white p-8 sm:p-10 rounded-3xl border border-brand-dark/10 shadow-sm">
+            <p>
+              Renerr Energies was founded around a simple observation: across Africa, extraordinary
+              human and economic potential is held back by the lack of affordable, dependable
+              electricity. Despite abundant renewable natural resources, millions of homes,
+              enterprises, health centers, and learning institutions are constrained by erratic power
+              or forced to rely on expensive, polluting fossil fuel alternatives.
+            </p>
+            <p>
+              We established Renerr to bridge this gap. We recognized that closing Africa's energy
+              deficit requires moving beyond rigid, one-size-fits-all models. It demands practical
+              problem-solving, scalable business structures, and a willingness to collaborate with
+              local communities, engineering specialists, financiers, and public institutions.
+            </p>
+            <p>
+              As an African energy-access company, Renerr is building an enduring platform designed to
+              originate, develop, and support viable clean energy solutions that create measurable
+              opportunity across the continent.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white border-b border-brand-dark/5" id="mission">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mission */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-brand-dark/10 shadow-sm flex flex-col justify-between">
+            <div className="p-8 sm:p-10 rounded-3xl bg-brand-dark text-white border border-brand-primary/20 shadow-sm flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-brand-primary text-white flex items-center justify-center">
                   <Compass className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
                   Our Mission
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-brand-dark leading-snug">
-                  To make affordable and reliable electricity accessible to everyone, starting in
-                  Nigeria and expanding across Africa.
+                <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
+                  To reduce energy poverty and expand access to affordable, reliable electricity
+                  across Africa through practical solutions, innovation, and strategic partnerships.
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  We measure success not by kilowatts sold in isolation, but by classrooms
-                  illuminated, computer labs powered, and institutional barriers dismantled.
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  Working systematically to lower access barriers and deploy dependable power where it
+                  creates the greatest social and economic value.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-brand-dark/10 text-xs font-medium text-brand-primary">
-                Action-oriented &bull; Inclusive &bull; Sustainable
+              <div className="pt-6 mt-6 border-t border-white/10 text-xs font-medium text-brand-accent">
+                Permanent Mission &bull; Pan-African Scope
               </div>
             </div>
 
             {/* Vision */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-brand-dark/10 shadow-sm flex flex-col justify-between">
+            <div className="p-8 sm:p-10 rounded-3xl bg-brand-cream border border-brand-dark/10 shadow-sm flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-dark text-brand-accent flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-brand-accent text-brand-dark flex items-center justify-center">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
                   Our Vision
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold text-brand-dark leading-snug">
-                  An Africa where energy poverty no longer limits education, economic opportunity, or
-                  human potential.
+                  An Africa where access to reliable electricity enables every individual, household,
+                  business, and community to realise its full potential.
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  We envision a thriving continent where every young African has the tools, light,
-                  and connectivity needed to achieve their full aspirations.
+                  Envisioning a continent where no young mind, entrepreneur, or community is
+                  disadvantaged by a lack of access to clean power.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-brand-dark/10 text-xs font-medium text-brand-dark">
-                Generational Impact &bull; Human Empowerment
+              <div className="pt-6 mt-6 border-t border-brand-dark/10 text-xs font-medium text-brand-primary">
+                Generational Transformation &bull; Human Potential
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Grid */}
-      <section className="py-20 bg-white border-b border-brand-dark/5">
+      {/* What We Believe */}
+      <section className="py-20 bg-brand-cream border-b border-brand-dark/5" id="beliefs">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center space-y-3">
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
+              Guiding Convictions
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
+              What We Believe
+            </h2>
+            <p className="text-sm text-brand-muted max-w-2xl mx-auto">
+              Our work across Africa is anchored in five fundamental beliefs that shape every project
+              and partnership decision.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                title: 'Electricity is an enabler, not a luxury',
+                desc: 'Access to stable power is indispensable for modern healthcare, quality education, digital connectivity, and dignified livelihoods.',
+              },
+              {
+                title: 'Geography and income must not dictate access',
+                desc: 'People living in peri-urban, rural, or low-income settings have the right to reliable energy services tailored to their economic realities.',
+              },
+              {
+                title: 'Different challenges demand different solutions',
+                desc: 'No single technology, financing model, or delivery mechanism works everywhere. Flexibility, humility, and context-specific engineering are vital.',
+              },
+              {
+                title: 'Commercial viability ensures lasting impact',
+                desc: 'Projects must be financially and technically sustainable so they can reliably deliver energy and endure for decades without premature failure.',
+              },
+              {
+                title: 'Progress requires collective action',
+                desc: 'Closing the continent’s electricity gap demands deep, respectful collaboration across private enterprise, capital markets, governments, and local leaders.',
+              },
+            ].map((belief, i) => (
+              <div
+                key={i}
+                className="p-5 sm:p-6 rounded-2xl bg-white border border-brand-dark/10 shadow-sm flex items-start gap-4"
+              >
+                <div className="w-8 h-8 rounded-full bg-brand-light text-brand-primary flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-sm">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-brand-dark">{belief.title}</h3>
+                  <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-relaxed">
+                    {belief.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-20 bg-white border-b border-brand-dark/5" id="values">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
-              What Defines Us
+              Core Principles
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight">
               Our Core Values
             </h2>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed">
-              Every initiative, partnership negotiation, and engineering choice is guided by six
-              foundational values.
+              These six values guide our character, our strategic partnerships, and our long-term
+              commitments across Africa.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: 'Access & Inclusion',
-                desc: 'Energy is a fundamental enabler. We design models specifically to reach institutions and facilities traditionally bypassed by commercial providers.',
+                title: '1. Access and Inclusion',
+                desc: 'We believe energy access should create opportunities for more people, not just those who are already well served.',
                 icon: Target,
               },
               {
-                title: 'Integrity & Transparency',
-                desc: 'We communicate honestly regarding feasibility, project risks, timelines, and costs. We never promise what cannot be verified technically.',
+                title: '2. Integrity',
+                desc: 'We value honesty, transparency, accountability, and responsible business practices in every interaction.',
                 icon: ShieldCheck,
               },
               {
-                title: 'Environmental & Economic Sustainability',
-                desc: 'Clean solar electricity that protects local ecosystems while creating dependable, financially self-sustaining project operations.',
-                icon: Sun,
-              },
-              {
-                title: 'Practical Innovation',
-                desc: 'We focus on pragmatic, durable, fit-for-purpose hardware and software rather than flashy gadgets that cannot survive local field conditions.',
+                title: '3. Innovation',
+                desc: 'We remain open to new technologies, ideas, financing models, and ways of delivering energy services.',
                 icon: Lightbulb,
               },
               {
-                title: 'Collaboration',
-                desc: 'We believe solving energy access requires uniting local contractors, institutional leaders, international financiers, and educators.',
+                title: '4. Collaboration',
+                desc: 'We believe progress requires capable partners working together toward shared, measurable objectives.',
                 icon: HeartHandshake,
               },
               {
-                title: 'Long-Term Impact',
-                desc: 'We build for longevity. Our service commitments extend across decades of dependable operation and continuous maintenance support.',
+                title: '5. Sustainability',
+                desc: 'We seek solutions that are environmentally responsible and commercially viable over the long term.',
+                icon: Sun,
+              },
+              {
+                title: '6. Impact',
+                desc: 'We focus on practical progress that improves energy access and creates meaningful opportunities for people.',
                 icon: Users,
               },
             ].map((v, i) => {
@@ -221,95 +309,99 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Our Approach to Sustainable Project Development */}
+      {/* Our Approach to Energy Access */}
       <section className="py-20 bg-brand-cream border-b border-brand-dark/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-brand-dark/10 space-y-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
-              Methodology
+              Strategic Discipline
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
-              Our Approach to Sustainable Project Development
+              Our Approach to Energy Access
             </h2>
-            <div className="space-y-4 text-sm text-brand-charcoal/85 leading-relaxed">
-              <p>
-                Renerr Energies rejects one-size-fits-all installations. A sustainable solar project
-                requires four synchronized pillars:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
-                  <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
-                    1. Rigorous Demand Sizing
-                  </h4>
-                  <p className="text-xs text-brand-muted mt-1">
-                    Matching real-world load schedules and critical appliances to battery capacity,
-                    preventing costly over-engineering and premature battery exhaustion.
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
-                  <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
-                    2. Blended Project Finance
-                  </h4>
-                  <p className="text-xs text-brand-muted mt-1">
-                    Structuring capital using equity, concessional debt, and grant capital to make
-                    monthly customer subscriptions truly affordable.
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
-                  <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
-                    3. Local Technical Alliances
-                  </h4>
-                  <p className="text-xs text-brand-muted mt-1">
-                    Partnering with qualified domestic Nigerian solar installers and technicians to
-                    ensure swift on-site maintenance and support local job creation.
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
-                  <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
-                    4. Performance-Linked Contracts
-                  </h4>
-                  <p className="text-xs text-brand-muted mt-1">
-                    Tying school payments to system uptime and energy delivery, ensuring our
-                    incentives are completely aligned with institutional success.
-                  </p>
-                </div>
+            <p className="text-sm text-brand-muted leading-relaxed">
+              We explore and develop practical energy solutions, innovative business models, and
+              strategic partnerships that can help close Africa's electricity access gap and support
+              long-term development.
+            </p>
+          </div>
+
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-brand-dark/10 space-y-6 shadow-sm">
+            <p className="text-sm sm:text-base text-brand-charcoal/85 leading-relaxed">
+              Rather than attempting to apply rigid templates across diverse settings, Renerr
+              approaches every opportunity with technical rigor and commercial discipline:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
+                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
+                  Needs-Driven Design
+                </h4>
+                <p className="text-xs text-brand-muted mt-1 leading-relaxed">
+                  Thorough assessment of load profiles, user habits, and energy requirements before
+                  specifying any hardware or system topology.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
+                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
+                  Technology Agnostic
+                </h4>
+                <p className="text-xs text-brand-muted mt-1 leading-relaxed">
+                  Selecting the right clean energy technologies—solar, battery storage, hybrid
+                  systems, or mini-grids—best suited to the specific location.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
+                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
+                  Viable Business Structures
+                </h4>
+                <p className="text-xs text-brand-muted mt-1 leading-relaxed">
+                  Structuring innovative financing, energy service agreements, and risk-sharing
+                  mechanisms that align institutional cash flows with energy delivery.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-brand-cream border border-brand-dark/10">
+                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider">
+                  Long-Term Partnerships
+                </h4>
+                <p className="text-xs text-brand-muted mt-1 leading-relaxed">
+                  Uniting verified EPC engineers, institutional operators, and financiers for
+                  reliable ongoing operation and maintenance.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Founder Placeholder Section (Tasteful, editable in code, honest!) */}
-      {/* 
-        NOTE TO FOUNDER:
-        When ready to display your personal founder profile and portrait, you can configure your details 
-        below or in siteConfig.ts. This section is crafted to maintain high credibility without inventing
-        unverified claims.
-      */}
+      {/* Leadership & Dialogue Section */}
       <section className="py-20 bg-white border-b border-brand-dark/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-light text-brand-primary text-xs font-semibold uppercase tracking-wider">
-            <UserCheck className="w-3.5 h-3.5" />
-            <span>Leadership & Mission Stewardship</span>
+            <Globe2 className="w-3.5 h-3.5" />
+            <span>African Energy Leadership</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
-            Founded With Purpose in Nigeria
+            Founded With Purpose. Driven by Impact.
           </h2>
 
           <p className="text-sm sm:text-base text-brand-muted max-w-2xl mx-auto leading-relaxed">
-            Renerr Energies Ltd is led by founder initiative focused on catalytic energy access.
-            Our team collaborates directly with clean tech advisors, solar engineers, and financing
-            partners across Nigeria and internationally to build a scalable clean energy enterprise.
+            Renerr Energies Ltd is governed by leadership deeply committed to sustainable African
+            development. We work directly with experienced clean-tech practitioners, project
+            developers, and financing specialists to build an enduring clean energy institution.
           </p>
 
           <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 max-w-xl mx-auto text-left">
             <h4 className="text-xs font-bold uppercase tracking-wider text-brand-primary mb-1">
-              Interested in speaking with the founder?
+              Interested in strategic dialogue?
             </h4>
             <p className="text-xs text-brand-muted leading-relaxed">
-              We welcome prospective technical partners, impact investors, and education
-              proprietors to connect directly for strategic dialogue.
+              We welcome prospective technical partners, impact investors, development
+              organisations, and institutional leaders to connect with our leadership team.
             </p>
             <div className="mt-4">
               <Link
@@ -328,18 +420,18 @@ export const AboutPage: React.FC = () => {
       <section className="py-16 bg-brand-dark text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-            Join us on this mission.
+            Join Us in Expanding Energy Access
           </h2>
           <p className="text-sm text-gray-300 max-w-xl mx-auto">
-            Discover how your organisation can collaborate with Renerr Energies as an EPC partner,
-            investor, or institutional ally.
+            Discover how your organisation can collaborate with Renerr Energies as an engineering
+            ally, investor, development partner, or customer.
           </p>
           <div className="pt-2">
             <Link
               to="/partner"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors"
             >
-              <span>Explore Partnership Pathways</span>
+              <span>Explore Partnership Opportunities</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

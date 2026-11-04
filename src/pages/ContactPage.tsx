@@ -9,9 +9,9 @@ import {
   CheckCircle2,
   Copy,
   ExternalLink,
-  GraduationCap,
   Handshake,
-  HelpCircle,
+  Building2,
+  Globe2,
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { handleFormSubmission, FormSubmissionResult } from '../utils/formHandler';
@@ -21,7 +21,7 @@ export const ContactPage: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    enquiryType: 'General Enquiry',
+    enquiryType: 'General Enquiries',
     message: '',
   });
 
@@ -31,11 +31,11 @@ export const ContactPage: React.FC = () => {
   const [copiedSummary, setCopiedSummary] = useState(false);
 
   const enquiryTypes = [
-    'General Enquiry',
-    'School Electrification Interest',
-    'Partnership & Technical Collaboration',
-    'Financing & Investment Inquiries',
-    'Press & Media',
+    'Partnership Opportunities',
+    'Project and Energy Solutions',
+    'Investment and Financing',
+    'Institutional Enquiries',
+    'General Enquiries',
   ];
 
   const validate = () => {
@@ -96,41 +96,22 @@ export const ContactPage: React.FC = () => {
               <span>Get in Touch</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Connect With Renerr Energies Ltd
+              Let's Start a Conversation.
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              We welcome dialogue with schools seeking reliable power, clean energy engineering
-              practitioners, project financiers, and educational authorities across Nigeria.
+              Whether you are exploring an energy project, seeking a technical or financing partner,
+              representing an institution, or interested in contributing to improved electricity
+              access, we would welcome the opportunity to hear from you.
             </p>
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none" />
       </section>
 
-      {/* Inquiry Pathways Grid */}
+      {/* Pathways Grid */}
       <section className="py-16 bg-white border-b border-brand-dark/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">For Schools & Academies</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  Interested in exploring zero-upfront-cost solar energy for classrooms, computer
-                  labs, and administrative offices?
-                </p>
-              </div>
-              <div className="pt-2">
-                <Link
-                  to="/schools"
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  Register School Interest &rarr;
-                </Link>
-              </div>
-            </div>
-
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
               <div className="space-y-2">
                 <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
@@ -138,8 +119,8 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">Partnership & Financing</h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For solar EPCs, impact investors, DFIs, and development programmes seeking
-                  collaboration on project portfolios.
+                  For solar EPCs, impact funds, DFIs, and development programmes seeking
+                  collaboration on energy access pipelines.
                 </p>
               </div>
               <div className="pt-2">
@@ -155,12 +136,33 @@ export const ContactPage: React.FC = () => {
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
               <div className="space-y-2">
                 <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <HelpCircle className="w-5 h-5" />
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-brand-dark">Projects & Institutions</h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  For schools, healthcare facilities, commercial businesses, and communities
+                  exploring reliable electricity solutions.
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link
+                  to="/approach"
+                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
+                >
+                  Learn About Our Approach &rarr;
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+                  <Globe2 className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">Direct General Inquiries</h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  Reach out directly to our leadership and project coordination team regarding any
-                  other matters.
+                  Reach out directly to our leadership and project development team regarding any
+                  general inquiries.
                 </p>
               </div>
               <div className="pt-2">
@@ -190,8 +192,8 @@ export const ContactPage: React.FC = () => {
                   Communication Details
                 </h2>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  We are actively building our team and pipeline across Nigeria. All enquiries are
-                  promptly reviewed by company leadership.
+                  We are actively building our team, initiatives, and pipeline across Africa. All
+                  enquiries are promptly reviewed by company leadership.
                 </p>
               </div>
 
@@ -249,12 +251,12 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted">
-                      Operating Jurisdiction
+                      Location & Jurisdiction
                     </h3>
                     <p className="text-sm font-semibold text-brand-dark mt-0.5">
                       {siteConfig.contact.addressDisplay}
                     </p>
-                    <p className="text-xs text-brand-muted mt-0.5">Registered entity in Nigeria</p>
+                    <p className="text-xs text-brand-muted mt-0.5">Headquartered in Nigeria</p>
                   </div>
                 </div>
 
@@ -379,14 +381,14 @@ export const ContactPage: React.FC = () => {
                         id="contactPhone"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="e.g. 0802 345 6789"
+                        placeholder="e.g. +234 802 345 6789"
                         className="w-full px-4 py-2.5 rounded-xl border border-brand-dark/15 text-sm text-brand-dark bg-brand-cream/40 focus:bg-white focus:border-brand-primary transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="enquiryType" className="block text-xs font-bold uppercase tracking-wider text-brand-dark">
-                        Subject / Topic
+                        Enquiry Category
                       </label>
                       <select
                         id="enquiryType"
@@ -412,7 +414,7 @@ export const ContactPage: React.FC = () => {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Please share the details of your inquiry..."
+                      placeholder="Please share the details of your inquiry, prospective project, or proposed collaboration..."
                       className={`w-full px-4 py-2.5 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                         errors.message ? 'border-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                       }`}
