@@ -94,7 +94,7 @@ export const HomePage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-xs uppercase tracking-wider text-brand-accent font-semibold">
-                          Our Permanent Mission
+                          Our Mission
                         </p>
                         <p className="text-sm font-medium text-white mt-0.5">
                           Closing Africa's Energy Access Gap

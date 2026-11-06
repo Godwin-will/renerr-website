@@ -25,6 +25,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Our Mission', path: '/about#mission' },
     { name: 'About Us', path: '/about' },
     { name: 'Our Approach', path: '/approach' },
     { name: 'Our Impact', path: '/impact' },
@@ -82,15 +83,23 @@ export const Navbar: React.FC = () => {
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
               {navLinks.map((link) => (
                 <NavLink
-                  key={link.path}
+                  key={link.name}
                   to={link.path}
-                  className={({ isActive }) =>
-                    `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      isActive
+                  className={({ isActive }) => {
+                    const isMission = link.name === 'Our Mission';
+                    const isAbout = link.name === 'About Us';
+                    const currentActive = isMission
+                      ? location.pathname === '/about' && location.hash === '#mission'
+                      : isAbout
+                      ? location.pathname === '/about' && location.hash !== '#mission'
+                      : isActive;
+
+                    return `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                      currentActive
                         ? 'text-brand-primary font-semibold bg-brand-light/70'
                         : 'text-brand-charcoal hover:text-brand-primary hover:bg-brand-light/40'
-                    }`
-                  }
+                    }`;
+                  }}
                 >
                   {link.name}
                 </NavLink>
@@ -99,12 +108,6 @@ export const Navbar: React.FC = () => {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link
-                to="/about"
-                className="px-4 py-2 text-sm font-medium text-brand-dark hover:text-brand-primary rounded-lg transition-colors"
-              >
-                Our Mission
-              </Link>
               <Link
                 to="/partner"
                 className="px-4 py-2 text-sm font-semibold text-brand-dark bg-brand-accent hover:bg-[#a6dc70] rounded-lg shadow-sm transition-all duration-200 hover:shadow-md flex items-center gap-1.5"
@@ -142,15 +145,23 @@ export const Navbar: React.FC = () => {
               <div className="space-y-1">
                 {navLinks.map((link) => (
                   <NavLink
-                    key={link.path}
+                    key={link.name}
                     to={link.path}
-                    className={({ isActive }) =>
-                      `block px-4 py-2.5 rounded-lg text-base font-medium transition-colors ${
-                        isActive
+                    className={({ isActive }) => {
+                      const isMission = link.name === 'Our Mission';
+                      const isAbout = link.name === 'About Us';
+                      const currentActive = isMission
+                        ? location.pathname === '/about' && location.hash === '#mission'
+                        : isAbout
+                        ? location.pathname === '/about' && location.hash !== '#mission'
+                        : isActive;
+
+                      return `block px-4 py-2.5 rounded-lg text-base font-medium transition-colors ${
+                        currentActive
                           ? 'bg-brand-primary text-white font-semibold'
                           : 'text-brand-charcoal hover:bg-brand-light hover:text-brand-primary'
-                      }`
-                    }
+                      }`;
+                    }}
                   >
                     {link.name}
                   </NavLink>
