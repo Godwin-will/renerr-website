@@ -14,7 +14,7 @@ import {
   Activity,
   Layers,
 } from 'lucide-react';
-import { ImageWithFallback } from '../components/common/ImageWithFallback';
+import { CommunityCoFinancingIllustration } from '../components/common/CommunityCoFinancingIllustration';
 
 export const HomePage: React.FC = () => {
   return (
@@ -77,32 +77,9 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Visual: Clean Energy + Technology + People */}
+            {/* Right Visual: Community Co-Financing Model Illustration */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border border-brand-dark/10 shadow-2xl bg-brand-dark p-2">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1508873696983-2df5293cb395?auto=format&fit=crop&w=1200&q=80"
-                  alt="African entrepreneurs and engineers collaborating with modern clean energy technology"
-                  fallbackText="Clean Energy Technology & Access"
-                  className="w-full h-80 sm:h-96 object-cover rounded-2xl"
-                />
-
-                {/* Floating In-Development App Preview Card */}
-                <div className="absolute -bottom-4 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-brand-dark/10 shadow-xl hidden sm:flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-brand-primary text-brand-accent flex items-center justify-center shadow-sm">
-                      <Smartphone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-brand-dark">RENERR Platform</p>
-                      <p className="text-[11px] text-brand-muted">Connecting people to energy opportunities</p>
-                    </div>
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-light text-brand-primary border border-brand-primary/20">
-                    In Development
-                  </span>
-                </div>
-              </div>
+              <CommunityCoFinancingIllustration />
             </div>
           </div>
         </div>
