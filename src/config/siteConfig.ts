@@ -2,9 +2,9 @@
  * Centralized Site Configuration for Renerr Energies Ltd
  * 
  * Positioning:
- * Renerr Energies develops practical energy solutions that help businesses,
- * organisations and communities access affordable, reliable electricity through
- * flexible project arrangements and innovative shared-energy models.
+ * Renerr is a clean energy-tech startup committed to making affordable and reliable
+ * electricity more accessible by combining clean energy solutions, innovative co-financing,
+ * and digital technology.
  */
 
 export interface SiteConfig {
@@ -20,22 +20,12 @@ export interface SiteConfig {
   vision: string;
   guidingBelief: string;
   brandPromise: string;
-  approach: string;
   
-  // Principal Business Models
-  models: {
-    commercial: {
-      title: string;
-      tagline: string;
-      description: string;
-      illustrativePayment: string;
-    };
-    community: {
-      title: string;
-      tagline: string;
-      description: string;
-      platformRole: string;
-    };
+  // Co-financing & Platform Philosophy
+  coFinancing: {
+    householdsText: string;
+    businessesText: string;
+    appDescription: string;
   };
 
   // Educational & Community Impact
@@ -47,16 +37,16 @@ export interface SiteConfig {
     };
   };
 
-  // Contact details (Configurable by founder)
+  // Contact details
   contact: {
     email: string;
     phone: string;
-    whatsappNumber: string; // International format digits only (e.g. "2348000000000")
+    whatsappNumber: string; // International format digits only
     addressDisplay: string;
     officeHours: string;
   };
 
-  // Social Links (Only displayed if non-empty)
+  // Social Links
   social: {
     linkedin?: string;
     twitter?: string;
@@ -72,9 +62,9 @@ export interface SiteConfig {
   // Standard legal notices & disclaimers
   disclaimers: {
     generalNotice: string;
-    paymentTerms: string;
-    communityModel: string;
-    partnerships: string;
+    coFinancingNotice: string;
+    communityFeasibility: string;
+    appDevelopment: string;
   };
 }
 
@@ -84,35 +74,25 @@ export const siteConfig: SiteConfig = {
   country: "Nigeria",
   region: "Africa",
   siteUrl: "https://renerrenergies.com",
-  coreMessage: "Making reliable energy more accessible to businesses, organisations and communities.",
+  coreMessage: "Renerr uses clean energy, innovative co-financing and technology to make reliable electricity more accessible.",
   tagline: "Making Reliable Energy More Accessible.",
-  positioningStatement: "Renerr Energies develops practical energy solutions that help businesses, organisations and communities access affordable, reliable electricity through flexible project arrangements and innovative shared-energy models.",
-  mission: "To reduce energy poverty and expand access to affordable, reliable electricity across Africa through practical solutions, innovation and strategic partnerships.",
+  positioningStatement: "Renerr combines clean energy solutions, innovative co-financing and digital technology to help individuals, communities and businesses access reliable electricity.",
+  mission: "To reduce energy poverty and expand access to affordable, reliable electricity across Africa through innovation, practical solutions and strategic partnerships.",
   vision: "An Africa where access to reliable electricity enables every individual, household, business and community to realise its full potential.",
-  guidingBelief: "We believe that reliable electricity is fundamental to human progress and that access to energy should not be determined solely by income or geography.",
-  brandPromise: "Working to make reliable electricity more accessible, affordable and sustainable through practical project execution and shared energy models.",
-  approach: "We work with businesses, institutions and communities to develop energy projects that respond to their electricity requirements, financial circumstances and local conditions.",
+  guidingBelief: "Reliable electricity is a foundation for opportunity, productivity and human development. We believe access to energy should not be limited by income or geography.",
+  brandPromise: "Making reliable electricity more accessible through clean energy, innovative co-financing and digital technology.",
   
-  models: {
-    commercial: {
-      title: "Commercial & Organisational Energy Projects",
-      tagline: "Energy Solutions for Businesses and Organisations",
-      description: "We work with businesses, institutions and organisations to develop and implement energy projects tailored to their electricity requirements. Through structured payment arrangements, we aim to make energy infrastructure more accessible without requiring every customer to finance the entire project cost upfront.",
-      illustrativePayment: "Payment arrangements may include an initial contribution followed by agreed instalments over a defined period (for example, an illustrative 50% initial contribution and 50% deferred balance over 3–12 months). Actual terms depend on project scale, technical design, credit assessment, and formal bilateral contracts.",
-    },
-    community: {
-      title: "Community-Based Shared Energy Solutions",
-      tagline: "Bringing Communities Together to Access Reliable Electricity",
-      description: "We are developing a community-based approach that enables households within a suitable locality to collectively access shared energy infrastructure. Rather than requiring one household to bear the entire investment independently, participating residents can come together through a joint arrangement, pool their contributions and access a shared energy solution.",
-      platformRole: "Digital tools and a future mobile application are being designed as enabling platforms to coordinate registrations, community clusters, contributions and project management—supporting service delivery rather than acting as standalone software products.",
-    },
+  coFinancing: {
+    householdsText: "Through our community-based approach, residents within suitable localities can come together to participate in shared energy projects. Instead of one household carrying the entire investment alone, participating residents can pool their contributions towards accessing shared energy infrastructure.",
+    businessesText: "We also work towards making energy projects more accessible to businesses and organisations through structured co-financing and flexible payment arrangements. Depending on the project, customers may make an initial contribution and settle the remaining balance over an agreed period.",
+    appDescription: "RENERR is being developed as the digital platform through which users will discover energy opportunities, participate in shared energy arrangements, coordinate contributions and manage their electricity services.",
   },
 
   initiatives: {
     awarenessInitiative: {
       name: "RENERR Energy Awareness Initiative",
       focus: "Educational outreach for secondary school students",
-      description: "An educational outreach programme through which we engage secondary school students on renewable energy technologies, energy sustainability, electricity access, and future clean energy careers.",
+      description: "An educational initiative engaging secondary school students on renewable energy technologies, energy sustainability, electricity access, and future energy opportunities.",
     },
   },
 
@@ -136,9 +116,9 @@ export const siteConfig: SiteConfig = {
   },
 
   disclaimers: {
-    generalNotice: "Renerr Energies develops projects tailored to specific energy needs, local conditions, and feasibility assessments.",
-    paymentTerms: "Illustrative payment arrangements (such as a 50% initial deposit with deferred balance over 3–12 months) are examples only and do not represent a universal or guaranteed offer. Actual terms are determined individually based on technical audits, project scale, and mutually agreed contractual terms.",
-    communityModel: "Community-based shared energy is an evolving model under development. Coverage, cluster sizes, and infrastructure are evaluated on a case-by-case basis based on technical, economic, and geographic feasibility.",
-    partnerships: "Renerr Energies actively collaborates with technical specialists, investors, development finance institutions, public agencies, and communities to expand energy access.",
+    generalNotice: "Renerr Energies develops practical clean energy projects tailored to local conditions, energy requirements, and feasibility assessments.",
+    coFinancingNotice: "Co-financing and payment arrangements are subject to project requirements, technical feasibility, and mutually agreed terms. Terms vary by project and do not represent a guaranteed offer.",
+    communityFeasibility: "Community eligibility, cluster sizes, and geographical coverage depend on technical, economic, and structural feasibility.",
+    appDevelopment: "RENERR is currently under development. More information about availability will be announced as we progress.",
   }
 };

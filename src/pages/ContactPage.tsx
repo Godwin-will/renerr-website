@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
   Mail,
   MessageCircle,
@@ -9,20 +8,17 @@ import {
   CheckCircle2,
   Copy,
   ExternalLink,
-  Handshake,
-  Building2,
-  Users,
+  Sparkles,
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { handleFormSubmission, FormSubmissionResult } from '../utils/formHandler';
 
 export const ContactPage: React.FC = () => {
-  const enquiryTypes = [
-    'Commercial energy projects',
-    'Community energy participation',
-    'Investment and financing',
-    'Technology and implementation partnerships',
-    'Development and institutional partnerships',
+  const enquiryCategories = [
+    'Household and community energy access',
+    'Business and organisational projects',
+    'Partnerships and investment',
+    'Technology and development',
     'General enquiries',
   ];
 
@@ -30,7 +26,7 @@ export const ContactPage: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    enquiryType: enquiryTypes[0],
+    enquiryCategory: enquiryCategories[0],
     message: '',
   });
 
@@ -41,11 +37,11 @@ export const ContactPage: React.FC = () => {
 
   const validate = () => {
     const errs: Record<string, string> = {};
-    if (!formData.name.trim()) errs.name = 'Please provide your full name.';
+    if (!formData.name.trim()) errs.name = 'Please enter your full name.';
     if (!formData.email.trim()) {
       errs.email = 'Please provide your email address.';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errs.email = 'Please provide a valid email.';
+      errs.email = 'Please provide a valid email format.';
     }
     if (!formData.message.trim()) {
       errs.message = 'Please write your message or enquiry.';
@@ -64,7 +60,7 @@ export const ContactPage: React.FC = () => {
     const result = await handleFormSubmission(
       siteConfig.forms.contactFormEndpoint,
       formData,
-      `Contact Enquiry: ${formData.enquiryType} from ${formData.name}`
+      `Contact Enquiry: ${formData.enquiryCategory} from ${formData.name}`
     );
 
     setIsSubmitting(false);
@@ -88,102 +84,35 @@ export const ContactPage: React.FC = () => {
 
   return (
     <div className="space-y-0">
-      {/* Header Banner */}
+      {/* ======================================================== */}
+      {/* 1. HERO BANNER                                           */}
+      {/* ======================================================== */}
       <section className="bg-brand-dark text-white py-16 lg:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-semibold uppercase tracking-wider">
-              <Mail className="w-3.5 h-3.5" />
-              <span>Get in Touch</span>
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Contact Us</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Let's Start a Conversation.
+              Let's Talk About Energy Access.
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Whether you are an enterprise exploring structured energy financing, a community cluster
-              interested in shared power, an investor, or a technical partner, our leadership and project
-              development team would welcome the opportunity to connect.
+              Whether you are interested in accessing energy, exploring a project, partnering with us
+              or learning more about Renerr, we would be pleased to hear from you.
             </p>
           </div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none" />
       </section>
 
-      {/* Pathways Grid */}
-      <section className="py-16 bg-white border-b border-brand-dark/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">Commercial & Organisational Projects</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For enterprises, schools, hospitals, and facilities exploring structured payment
-                  models (e.g. 50% initial + 50% deferred balance).
-                </p>
-              </div>
-              <div className="pt-2">
-                <Link
-                  to="/energy-solutions#commercial"
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  Explore Commercial Solutions &rarr;
-                </Link>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <Users className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">Community Shared Energy</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For residential estates, market clusters, and community associations interested in
-                  pooling resources for centralized clean power.
-                </p>
-              </div>
-              <div className="pt-2">
-                <Link
-                  to="/energy-solutions#community"
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  Learn About Community Models &rarr;
-                </Link>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <Handshake className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">Partnership & Financing</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For EPC contractors, equipment manufacturers, impact financiers, DFIs, and institutional
-                  programmes seeking collaborative project pipelines.
-                </p>
-              </div>
-              <div className="pt-2">
-                <Link
-                  to="/partner"
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  View Partnership Pathways &rarr;
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Contact Section */}
+      {/* ======================================================== */}
+      {/* 2. MAIN CONTACT SECTION                                  */}
+      {/* ======================================================== */}
       <section className="py-20 bg-brand-cream border-b border-brand-dark/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Contact Details Card */}
+            {/* Left: Contact Information Cards */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-3">
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
@@ -193,12 +122,12 @@ export const ContactPage: React.FC = () => {
                   Communication Details
                 </h2>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  We are actively building our project pipeline across Nigeria and Africa. All
-                  enquiries are promptly reviewed by company leadership.
+                  Connect directly with our team regarding projects, partnerships, or community
+                  initiatives.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-brand-dark/10 space-y-6">
+              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm space-y-6">
                 {/* Email Channel */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center flex-shrink-0">
@@ -245,30 +174,30 @@ export const ContactPage: React.FC = () => {
                   </div>
                 )}
 
-                {/* Operating Geography */}
+                {/* Location */}
                 <div className="flex items-start gap-4 pt-4 border-t border-brand-dark/10">
                   <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted">
-                      Location & Jurisdiction
+                      Headquarters
                     </h3>
                     <p className="text-sm font-semibold text-brand-dark mt-0.5">
                       {siteConfig.contact.addressDisplay}
                     </p>
-                    <p className="text-xs text-brand-muted mt-0.5">Headquartered in Nigeria</p>
+                    <p className="text-xs text-brand-muted mt-0.5">Nigeria</p>
                   </div>
                 </div>
 
-                {/* Operating Hours */}
+                {/* Hours */}
                 <div className="flex items-start gap-4 pt-4 border-t border-brand-dark/10">
                   <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted">
-                      Business Hours
+                      Operating Hours
                     </h3>
                     <p className="text-sm font-semibold text-brand-dark mt-0.5">
                       {siteConfig.contact.officeHours}
@@ -279,17 +208,17 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Message Form */}
+            {/* Right: General Enquiry Form */}
             <div className="lg:col-span-7">
               <div className="bg-white rounded-3xl p-8 sm:p-10 border border-brand-dark/10 shadow-sm space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-brand-dark">Send an Enquiry</h3>
-                  <p className="text-xs text-brand-muted mt-1">
+                  <h3 className="text-xl sm:text-2xl font-bold text-brand-dark">Send an Enquiry</h3>
+                  <p className="text-xs sm:text-sm text-brand-muted mt-1">
                     Fill out the form below to transmit your message directly to our team.
                   </p>
                 </div>
 
-                {/* Feedback status */}
+                {/* Submission Feedback alert */}
                 {submissionResult && (
                   <div
                     className={`p-6 rounded-2xl border text-sm leading-relaxed space-y-4 ${
@@ -314,7 +243,7 @@ export const ContactPage: React.FC = () => {
                           {submissionResult.mailtoUrl && (
                             <a
                               href={submissionResult.mailtoUrl}
-                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold bg-brand-primary text-white hover:bg-brand-dark transition-colors shadow-sm"
+                              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-brand-primary text-white hover:bg-brand-dark transition-colors shadow-sm"
                             >
                               <Mail className="w-3.5 h-3.5" />
                               <span>Open in Email App</span>
@@ -324,10 +253,10 @@ export const ContactPage: React.FC = () => {
                           <button
                             type="button"
                             onClick={handleCopySummary}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold border border-brand-dark/20 text-brand-charcoal hover:bg-white transition-colors"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold border border-brand-dark/20 text-brand-charcoal hover:bg-white transition-colors"
                           >
                             <Copy className="w-3.5 h-3.5" />
-                            <span>{copiedSummary ? 'Copied!' : 'Copy Text'}</span>
+                            <span>{copiedSummary ? 'Copied!' : 'Copy Summary'}</span>
                           </button>
                         </div>
                       </div>
@@ -347,7 +276,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Chinwe Obi"
-                        className={`w-full px-4 py-2.5 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
+                        className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                           errors.name ? 'border-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                         }`}
                       />
@@ -364,7 +293,7 @@ export const ContactPage: React.FC = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="name@domain.com"
-                        className={`w-full px-4 py-2.5 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
+                        className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                           errors.email ? 'border-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                         }`}
                       />
@@ -383,23 +312,23 @@ export const ContactPage: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +234 802 345 6789"
-                        className="w-full px-4 py-2.5 rounded-xl border border-brand-dark/15 text-sm text-brand-dark bg-brand-cream/40 focus:bg-white focus:border-brand-primary transition-colors"
+                        className="w-full px-4 py-3 rounded-xl border border-brand-dark/15 text-sm text-brand-dark bg-brand-cream/40 focus:bg-white focus:border-brand-primary transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="enquiryType" className="block text-xs font-bold uppercase tracking-wider text-brand-dark">
-                        Enquiry Category
+                      <label htmlFor="enquiryCategory" className="block text-xs font-bold uppercase tracking-wider text-brand-dark">
+                        Enquiry Relating To
                       </label>
                       <select
-                        id="enquiryType"
-                        value={formData.enquiryType}
-                        onChange={(e) => setFormData({ ...formData, enquiryType: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-brand-dark/15 text-sm text-brand-dark bg-brand-cream/40 focus:bg-white focus:border-brand-primary transition-colors"
+                        id="enquiryCategory"
+                        value={formData.enquiryCategory}
+                        onChange={(e) => setFormData({ ...formData, enquiryCategory: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-brand-dark/15 text-sm text-brand-dark bg-brand-cream/40 focus:bg-white focus:border-brand-primary transition-colors"
                       >
-                        {enquiryTypes.map((et, i) => (
-                          <option key={i} value={et}>
-                            {et}
+                        {enquiryCategories.map((cat, i) => (
+                          <option key={i} value={cat}>
+                            {cat}
                           </option>
                         ))}
                       </select>
@@ -412,11 +341,11 @@ export const ContactPage: React.FC = () => {
                     </label>
                     <textarea
                       id="contactMessage"
-                      rows={5}
+                      rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Please describe your interest, institution, or project requirements..."
-                      className={`w-full px-4 py-2.5 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
+                      placeholder="Please describe your interest, community, or project requirements..."
+                      className={`w-full px-4 py-3 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                         errors.message ? 'border-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                       }`}
                     />

@@ -6,8 +6,8 @@ import {
   MessageCircle,
   MapPin,
   ArrowUp,
+  Sparkles,
   ExternalLink,
-  Zap,
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { siteConfig } from '../../config/siteConfig';
@@ -33,28 +33,28 @@ export const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <p className="text-brand-accent text-xs uppercase tracking-widest font-semibold mb-1">
-                Practical Energy Solutions
-              </p>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-primary/40 text-brand-accent mb-2">
+                <Sparkles className="w-3 h-3" />
+                <span>Clean Energy-Tech Startup</span>
+              </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Making Reliable Energy More Accessible.
               </h3>
-              <p className="text-sm text-gray-300 mt-1 max-w-xl">
-                We develop practical energy solutions that help businesses, organisations and
-                communities access affordable, reliable electricity through flexible project
-                arrangements and innovative shared-energy models.
+              <p className="text-sm text-gray-300 mt-1 max-w-xl leading-relaxed">
+                Renerr combines clean energy solutions, innovative co-financing and digital technology
+                to help individuals, communities and businesses access reliable electricity.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
               <Link
-                to="/energy-solutions"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
+                to="/how-it-works"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
               >
-                Explore Energy Solutions
+                Explore RENERR
               </Link>
               <Link
                 to="/partner"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors text-center"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors text-center"
               >
                 Partner With Us
               </Link>
@@ -64,72 +64,47 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Column 1 & 2: Brand Information */}
-          <div className="lg:col-span-2 space-y-4">
-            <Logo variant="light" size="lg" />
-            <p className="text-sm text-gray-300 leading-relaxed max-w-sm mt-3">
-              Renerr Energies Ltd is an African energy-access and energy-solutions company. We develop
-              commercial energy projects for organisations and community-based shared energy
-              solutions to reduce energy poverty across Africa.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Brand Information */}
+          <div className="lg:col-span-5 space-y-4">
+            <Logo variant="light" size="md" />
+            <p className="text-sm text-gray-300 leading-relaxed max-w-sm">
+              Renerr is a clean energy-tech startup committed to making affordable and reliable
+              electricity more accessible across Africa through innovative co-financing and digital
+              technology.
             </p>
-            <div className="flex items-center gap-2 text-xs text-brand-accent bg-white/5 border border-white/10 rounded-lg p-3 max-w-sm">
-              <Zap className="w-5 h-5 flex-shrink-0 text-brand-accent" />
-              <span>
-                Commercial energy projects & community-based shared energy solutions.
-              </span>
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300 max-w-sm">
+              <span className="font-semibold text-brand-accent">Platform in development: </span>
+              RENERR is being designed to connect people to energy opportunities and simplify
+              participation in shared energy services.
             </div>
           </div>
 
-          {/* Column 3: Solutions & Methodology */}
-          <div className="space-y-3">
+          {/* Navigation Links */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Energy Solutions
+              Navigation
             </h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link to="/energy-solutions#commercial" className="hover:text-white transition-colors">
-                  Commercial & Institutional Projects
+                <Link to="/" className="hover:text-white transition-colors">
+                  Home
                 </Link>
               </li>
-              <li>
-                <Link to="/energy-solutions#community" className="hover:text-white transition-colors">
-                  Community-Based Shared Energy
-                </Link>
-              </li>
-              <li>
-                <Link to="/energy-solutions#financing" className="hover:text-white transition-colors">
-                  Structured Payment Arrangements
-                </Link>
-              </li>
-              <li>
-                <Link to="/how-we-work" className="hover:text-white transition-colors">
-                  How We Work (6-Stage Process)
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Impact & Company */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Impact & Company
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">
-                  About Us & Story
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/how-it-works" className="hover:text-white transition-colors">
+                  How It Works
                 </Link>
               </li>
               <li>
                 <Link to="/impact" className="hover:text-white transition-colors">
-                  Our Impact & Future Objectives
-                </Link>
-              </li>
-              <li>
-                <Link to="/impact#awareness" className="hover:text-white transition-colors">
-                  RENERR Energy Awareness Initiative
+                  Our Impact
                 </Link>
               </li>
               <li>
@@ -142,39 +117,28 @@ export const Footer: React.FC = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link to="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Column 5: Contact & Inquiries */}
-          <div className="space-y-3">
+          {/* Contact Details */}
+          <div className="lg:col-span-4 space-y-3">
             <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Get In Touch
+              Connect With Us
             </h4>
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
-                <span>{siteConfig.contact.addressDisplay}</span>
-              </li>
-
+            <div className="space-y-2.5 text-sm text-gray-300">
               {siteConfig.contact.email && (
-                <li className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-brand-accent flex-shrink-0" />
+                <div className="flex items-start gap-2.5">
+                  <Mail className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="hover:text-white transition-colors break-all"
                   >
                     {siteConfig.contact.email}
                   </a>
-                </li>
+                </div>
               )}
-
               {siteConfig.contact.phone && (
-                <li className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-brand-accent flex-shrink-0" />
                   <a
                     href={`tel:${siteConfig.contact.phone}`}
@@ -182,55 +146,64 @@ export const Footer: React.FC = () => {
                   >
                     {siteConfig.contact.phone}
                   </a>
-                </li>
+                </div>
               )}
-
               {whatsappUrl && (
-                <li className="flex items-center gap-2.5">
-                  <MessageCircle className="w-4 h-4 text-brand-accent flex-shrink-0" />
+                <div className="flex items-center gap-2.5">
+                  <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0" />
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white inline-flex items-center gap-1 transition-colors text-brand-accent"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1"
                   >
-                    Chat on WhatsApp <ExternalLink className="w-3 h-3" />
+                    <span>Chat on WhatsApp</span>
+                    <ExternalLink className="w-3 h-3 text-gray-400" />
                   </a>
-                </li>
+                </div>
               )}
-
-              <li className="text-xs text-gray-400 pt-1">
-                {siteConfig.contact.officeHours}
-              </li>
-            </ul>
+              <div className="flex items-start gap-2.5 pt-1">
+                <MapPin className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
+                <span className="text-xs text-gray-400">
+                  {siteConfig.contact.addressDisplay}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Disclaimer Note */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-xs text-gray-400 leading-relaxed space-y-2">
-          <p className="max-w-4xl">
-            <span className="text-gray-300 font-semibold">Important Clarification: </span>
-            {siteConfig.disclaimers.generalNotice} {siteConfig.disclaimers.paymentTerms}
+      {/* Disclaimers & Legal Notice Band */}
+      <div className="border-t border-white/10 bg-brand-dark/80 text-[11px] text-gray-400 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
+          <p>
+            <strong className="text-gray-300">Platform Notice: </strong>
+            RENERR is currently under development. Availability and features will be announced as we
+            progress. The website does not provide direct application downloads.
           </p>
-          <p className="max-w-4xl">
-            {siteConfig.disclaimers.communityModel} {siteConfig.disclaimers.partnerships}
+          <p>
+            <strong className="text-gray-300">Co-financing & Terms: </strong>
+            Co-financing and payment arrangements are subject to project requirements, technical
+            feasibility, and mutually agreed terms. Terms vary by project and do not represent a
+            guaranteed offer. Community eligibility and geographical coverage depend on technical and
+            economic feasibility.
           </p>
         </div>
+      </div>
 
-        {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <div>
-            &copy; {currentYear} {siteConfig.companyName}. All rights reserved.
-          </div>
-          <div className="flex items-center gap-6">
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10 bg-black/30 py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
+          <p>&copy; {currentYear} Renerr Energies Ltd. All rights reserved.</p>
+          <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 text-gray-400 hover:text-brand-accent transition-colors"
-              aria-label="Scroll back to top"
+              className="inline-flex items-center gap-1 hover:text-white transition-colors ml-2"
+              aria-label="Back to top"
             >
               <span>Back to top</span>
               <ArrowUp className="w-3.5 h-3.5" />
