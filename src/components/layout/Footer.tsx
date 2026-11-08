@@ -6,8 +6,8 @@ import {
   MessageCircle,
   MapPin,
   ArrowUp,
-  Globe2,
   ExternalLink,
+  Zap,
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { siteConfig } from '../../config/siteConfig';
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
   const hasWhatsapp = Boolean(siteConfig.contact.whatsappNumber);
   const whatsappUrl = hasWhatsapp
     ? `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-        'Hello Renerr Energies, I would like to inquire about your energy access initiatives.'
+        'Hello Renerr Energies, I would like to inquire about your energy solutions.'
       )}`
     : null;
 
@@ -34,30 +34,29 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <p className="text-brand-accent text-xs uppercase tracking-widest font-semibold mb-1">
-                Collaborative Energy Access
+                Practical Energy Solutions
               </p>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Building a Better Energy Future Takes All of Us.
+                Making Reliable Energy More Accessible.
               </h3>
               <p className="text-sm text-gray-300 mt-1 max-w-xl">
-                We believe meaningful progress on energy access depends on collaboration. We welcome
-                conversations with organisations, institutions, investors, technical experts, and
-                communities that share our ambition to reduce energy poverty and expand access to
-                reliable electricity.
+                We develop practical energy solutions that help businesses, organisations and
+                communities access affordable, reliable electricity through flexible project
+                arrangements and innovative shared-energy models.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
               <Link
-                to="/partner"
+                to="/energy-solutions"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
               >
-                Explore Partnerships
+                Explore Energy Solutions
               </Link>
               <Link
-                to="/contact"
+                to="/partner"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-lg text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors text-center"
               >
-                Contact Us
+                Partner With Us
               </Link>
             </div>
           </div>
@@ -71,42 +70,42 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <Logo variant="light" size="lg" />
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm mt-3">
-              Renerr Energies Ltd is an African energy-access company working to reduce energy
-              poverty and expand access to affordable, reliable electricity across Africa through
-              practical solutions, innovation, and strategic partnerships.
+              Renerr Energies Ltd is an African energy-access and energy-solutions company. We develop
+              commercial energy projects for organisations and community-based shared energy
+              solutions to reduce energy poverty across Africa.
             </p>
             <div className="flex items-center gap-2 text-xs text-brand-accent bg-white/5 border border-white/10 rounded-lg p-3 max-w-sm">
-              <Globe2 className="w-5 h-5 flex-shrink-0 text-brand-accent" />
+              <Zap className="w-5 h-5 flex-shrink-0 text-brand-accent" />
               <span>
-                Committed to expanding energy access and unlocking human potential across Africa.
+                Commercial energy projects & community-based shared energy solutions.
               </span>
             </div>
           </div>
 
-          {/* Column 3: Approach & Solutions */}
+          {/* Column 3: Solutions & Methodology */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-brand-accent uppercase tracking-widest">
-              Our Approach
+              Energy Solutions
             </h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link to="/approach" className="hover:text-white transition-colors">
-                  Overview & Methodology
+                <Link to="/energy-solutions#commercial" className="hover:text-white transition-colors">
+                  Commercial & Institutional Projects
                 </Link>
               </li>
               <li>
-                <Link to="/approach#pillars" className="hover:text-white transition-colors">
-                  Four Strategic Pillars
+                <Link to="/energy-solutions#community" className="hover:text-white transition-colors">
+                  Community-Based Shared Energy
                 </Link>
               </li>
               <li>
-                <Link to="/approach#solutions" className="hover:text-white transition-colors">
-                  Flexible Energy Solutions
+                <Link to="/energy-solutions#financing" className="hover:text-white transition-colors">
+                  Structured Payment Arrangements
                 </Link>
               </li>
               <li>
-                <Link to="/approach#faq" className="hover:text-white transition-colors">
-                  Approach & Delivery FAQ
+                <Link to="/how-we-work" className="hover:text-white transition-colors">
+                  How We Work (6-Stage Process)
                 </Link>
               </li>
             </ul>
@@ -124,23 +123,23 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about#beliefs" className="hover:text-white transition-colors">
-                  What We Believe
-                </Link>
-              </li>
-              <li>
-                <Link to="/about#values" className="hover:text-white transition-colors">
-                  Our Values
-                </Link>
-              </li>
-              <li>
                 <Link to="/impact" className="hover:text-white transition-colors">
-                  Our Impact Ambition
+                  Our Impact & Future Objectives
+                </Link>
+              </li>
+              <li>
+                <Link to="/impact#awareness" className="hover:text-white transition-colors">
+                  RENERR Energy Awareness Initiative
                 </Link>
               </li>
               <li>
                 <Link to="/partner" className="hover:text-white transition-colors">
                   Partner With Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition-colors">
+                  Contact Us
                 </Link>
               </li>
               <li>
@@ -208,10 +207,13 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Disclaimer Note */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-xs text-gray-400 leading-relaxed">
+        <div className="mt-12 pt-8 border-t border-white/10 text-xs text-gray-400 leading-relaxed space-y-2">
           <p className="max-w-4xl">
-            <span className="text-gray-300 font-semibold">Important Notice: </span>
-            {siteConfig.disclaimers.generalNotice} {siteConfig.disclaimers.partnerships}
+            <span className="text-gray-300 font-semibold">Important Clarification: </span>
+            {siteConfig.disclaimers.generalNotice} {siteConfig.disclaimers.paymentTerms}
+          </p>
+          <p className="max-w-4xl">
+            {siteConfig.disclaimers.communityModel} {siteConfig.disclaimers.partnerships}
           </p>
         </div>
 

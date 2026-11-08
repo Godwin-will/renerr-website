@@ -11,17 +11,26 @@ import {
   ExternalLink,
   Handshake,
   Building2,
-  Globe2,
+  Users,
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { handleFormSubmission, FormSubmissionResult } from '../utils/formHandler';
 
 export const ContactPage: React.FC = () => {
+  const enquiryTypes = [
+    'Commercial energy projects',
+    'Community energy participation',
+    'Investment and financing',
+    'Technology and implementation partnerships',
+    'Development and institutional partnerships',
+    'General enquiries',
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    enquiryType: 'General Enquiries',
+    enquiryType: enquiryTypes[0],
     message: '',
   });
 
@@ -29,14 +38,6 @@ export const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionResult, setSubmissionResult] = useState<FormSubmissionResult | null>(null);
   const [copiedSummary, setCopiedSummary] = useState(false);
-
-  const enquiryTypes = [
-    'Partnership Opportunities',
-    'Project and Energy Solutions',
-    'Investment and Financing',
-    'Institutional Enquiries',
-    'General Enquiries',
-  ];
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -99,9 +100,9 @@ export const ContactPage: React.FC = () => {
               Let's Start a Conversation.
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Whether you are exploring an energy project, seeking a technical or financing partner,
-              representing an institution, or interested in contributing to improved electricity
-              access, we would welcome the opportunity to hear from you.
+              Whether you are an enterprise exploring structured energy financing, a community cluster
+              interested in shared power, an investor, or a technical partner, our leadership and project
+              development team would welcome the opportunity to connect.
             </p>
           </div>
         </div>
@@ -115,12 +116,54 @@ export const ContactPage: React.FC = () => {
             <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
               <div className="space-y-2">
                 <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-brand-dark">Commercial & Organisational Projects</h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  For enterprises, schools, hospitals, and facilities exploring structured payment
+                  models (e.g. 50% initial + 50% deferred balance).
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link
+                  to="/energy-solutions#commercial"
+                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
+                >
+                  Explore Commercial Solutions &rarr;
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+                  <Users className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-brand-dark">Community Shared Energy</h3>
+                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  For residential estates, market clusters, and community associations interested in
+                  pooling resources for centralized clean power.
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link
+                  to="/energy-solutions#community"
+                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
+                >
+                  Learn About Community Models &rarr;
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
                   <Handshake className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-brand-dark">Partnership & Financing</h3>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For solar EPCs, impact funds, DFIs, and development programmes seeking
-                  collaboration on energy access pipelines.
+                  For EPC contractors, equipment manufacturers, impact financiers, DFIs, and institutional
+                  programmes seeking collaborative project pipelines.
                 </p>
               </div>
               <div className="pt-2">
@@ -128,50 +171,8 @@ export const ContactPage: React.FC = () => {
                   to="/partner"
                   className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
                 >
-                  Explore Partnership Pathways &rarr;
+                  View Partnership Pathways &rarr;
                 </Link>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">Projects & Institutions</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  For schools, healthcare facilities, commercial businesses, and communities
-                  exploring reliable electricity solutions.
-                </p>
-              </div>
-              <div className="pt-2">
-                <Link
-                  to="/approach"
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  Learn About Our Approach &rarr;
-                </Link>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-brand-cream border border-brand-dark/10 space-y-3 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center">
-                  <Globe2 className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-brand-dark">Direct General Inquiries</h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  Reach out directly to our leadership and project development team regarding any
-                  general inquiries.
-                </p>
-              </div>
-              <div className="pt-2">
-                <a
-                  href={`mailto:${siteConfig.contact.email || 'info@renerrenergies.com'}`}
-                  className="text-xs font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-                >
-                  Send Direct Email &rarr;
-                </a>
               </div>
             </div>
           </div>
@@ -192,7 +193,7 @@ export const ContactPage: React.FC = () => {
                   Communication Details
                 </h2>
                 <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
-                  We are actively building our team, initiatives, and pipeline across Africa. All
+                  We are actively building our project pipeline across Nigeria and Africa. All
                   enquiries are promptly reviewed by company leadership.
                 </p>
               </div>
@@ -407,14 +408,14 @@ export const ContactPage: React.FC = () => {
 
                   <div className="space-y-1.5">
                     <label htmlFor="contactMessage" className="block text-xs font-bold uppercase tracking-wider text-brand-dark">
-                      Your Message <span className="text-red-600">*</span>
+                      Message / Enquiry Details <span className="text-red-600">*</span>
                     </label>
                     <textarea
                       id="contactMessage"
-                      rows={4}
+                      rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Please share the details of your inquiry, prospective project, or proposed collaboration..."
+                      placeholder="Please describe your interest, institution, or project requirements..."
                       className={`w-full px-4 py-2.5 rounded-xl border text-sm text-brand-dark bg-brand-cream/40 focus:bg-white transition-colors ${
                         errors.message ? 'border-red-500' : 'border-brand-dark/15 focus:border-brand-primary'
                       }`}
@@ -426,10 +427,10 @@ export const ContactPage: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] shadow-sm transition-all disabled:opacity-50"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] shadow-sm transition-all disabled:opacity-50"
                     >
-                      <span>{isSubmitting ? 'Preparing...' : 'Send Message'}</span>
                       <Send className="w-4 h-4" />
+                      <span>{isSubmitting ? 'Transmitting...' : 'Send Message'}</span>
                     </button>
                   </div>
                 </form>

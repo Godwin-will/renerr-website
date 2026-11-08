@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
+import { EnergySolutionsPage } from './pages/EnergySolutionsPage';
+import { HowWeWorkPage } from './pages/HowWeWorkPage';
 import { AboutPage } from './pages/AboutPage';
-import { ApproachPage } from './pages/ApproachPage';
 import { ImpactPage } from './pages/ImpactPage';
 import { PartnerPage } from './pages/PartnerPage';
 import { ContactPage } from './pages/ContactPage';
@@ -17,9 +18,12 @@ export const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="energy-solutions" element={<EnergySolutionsPage />} />
+          <Route path="solutions" element={<EnergySolutionsPage />} />
+          <Route path="solution" element={<EnergySolutionsPage />} />
+          <Route path="how-we-work" element={<HowWeWorkPage />} />
+          <Route path="approach" element={<HowWeWorkPage />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="approach" element={<ApproachPage />} />
-          <Route path="solution" element={<ApproachPage />} />
           <Route path="impact" element={<ImpactPage />} />
           <Route path="who-we-serve" element={<ImpactPage />} />
           <Route path="partner" element={<PartnerPage />} />

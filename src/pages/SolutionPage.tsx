@@ -1,7 +1,7 @@
 import React from 'react';
-import { ApproachPage } from './ApproachPage';
+import { EnergySolutionsPage } from './EnergySolutionsPage';
 
 // Maintained for backward compatibility with existing links
 export const SolutionPage: React.FC = () => {
-  return <ApproachPage />;
+  return <EnergySolutionsPage />;
 };
