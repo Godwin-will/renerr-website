@@ -72,13 +72,13 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Original RENERR clean-energy access illustration */}
+            {/* RENERR field representative demonstrating the mobile app */}
             <div className="lg:col-span-5">
               <div className="mx-auto w-full max-w-[430px] rounded-[1.8rem] border border-brand-dark/10 bg-white p-2 shadow-xl">
                 <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-brand-light">
                   <img
-                    src="/images/renerr-home-energy-illustration.svg"
-                    alt="Flat illustration of a sunny green neighborhood with modern homes, rooftop solar panels, home battery storage, trees and people"
+                    src="/images/renerr-field-demo-illustration.svg"
+                    alt="Flat illustration of an African RENERR field representative demonstrating the app to a homeowner beside a solar-powered home"
                     width="640"
                     height="480"
                     decoding="async"
