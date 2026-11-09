@@ -14,7 +14,6 @@ import {
   Activity,
   Layers,
 } from 'lucide-react';
-import { CommunityCoFinancingIllustration } from '../components/common/CommunityCoFinancingIllustration';
 
 export const HomePage: React.FC = () => {
   return (
@@ -77,10 +76,8 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Visual: Community Co-Financing Model Illustration */}
-            <div className="lg:col-span-5 relative">
-              <CommunityCoFinancingIllustration />
-            </div>
+            {/* Reserved space keeps the hero balanced without business-model imagery. */}
+            <div className="lg:col-span-5" aria-hidden="true" />
           </div>
         </div>
       </section>
