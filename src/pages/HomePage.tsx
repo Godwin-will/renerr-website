@@ -10,6 +10,7 @@ import {
   HeartHandshake,
   TrendingUp,
 } from 'lucide-react';
+import { HeroAppPreview } from '../components/common/HeroAppPreview';
 
 export const HomePage: React.FC = () => {
   return (
@@ -72,8 +73,10 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Reserved space keeps the hero balanced without business-model imagery. */}
-            <div className="lg:col-span-5" aria-hidden="true" />
+            {/* Conceptual RENERR app preview */}
+            <div className="lg:col-span-5">
+              <HeroAppPreview />
+            </div>
           </div>
         </div>
       </section>
