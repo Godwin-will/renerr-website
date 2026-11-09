@@ -10,7 +10,6 @@ import {
   HeartHandshake,
   TrendingUp,
 } from 'lucide-react';
-import { HeroEnergyAccessSchematic } from '../components/common/HeroEnergyAccessSchematic';
 
 export const HomePage: React.FC = () => {
   return (
@@ -73,9 +72,20 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* RENERR clean-energy access ecosystem */}
+            {/* Clean-energy access photograph */}
             <div className="lg:col-span-5">
-              <HeroEnergyAccessSchematic />
+              <div className="mx-auto w-full max-w-[430px] rounded-[1.8rem] border border-brand-dark/10 bg-white p-2 shadow-xl">
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <img
+                    src="/images/renerr-clean-energy-access-south-africa.jpg"
+                    alt="Solar panels installed on the roof of a residential home in South Africa"
+                    width="1800"
+                    height="1350"
+                    decoding="async"
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
