@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="320" y1="20" x2="320" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F4F4"/>
+      <stop offset="1" stop-color="#F7F8F3"/>
+    </linearGradient>
+    <linearGradient id="hills" x1="320" y1="210" x2="320" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7D6C3"/>
+      <stop offset="1" stop-color="#D9E9D8"/>
+    </linearGradient>
+    <linearGradient id="homeWall" x1="320" y1="215" x2="320" y2="375" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF5"/>
+      <stop offset="1" stop-color="#F1EBDD"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="260" y1="180" x2="390" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D7774"/>
+      <stop offset="1" stop-color="#194E4D"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0" cy="0" r="1" gradientTransform="matrix(0 72 -72 0 506 105)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8DB83" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#F8DB83" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="60" y="130" width="530" height="340" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <clipPath id="scene">
+      <rect x="12" y="12" width="616" height="456" rx="34"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#scene)">
+    <rect x="12" y="12" width="616" height="456" fill="url(#sky)"/>
+    <circle cx="506" cy="105" r="76" fill="url(#sunGlow)"/>
+    <circle cx="506" cy="105" r="34" fill="#F6D36E"/>
+    <circle cx="496" cy="95" r="27" fill="#F9DF96" opacity=".6"/>
+    <path d="M506 56v-12M506 166v-12M457 105h-12M567 105h-12M471 70l-9-9M550 149l-9-9M541 70l9-9M462 149l9-9" stroke="#E8B94C" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+
+    <path d="M24 264c67-39 117-50 183-22 62 26 94 24 155-5 80-38 154-27 266 26v143H24V264Z" fill="url(#hills)"/>
+    <path d="M24 304c89-34 139-23 210-3 72 20 143 6 207-20 66-26 120-15 187 13v174H24V304Z" fill="#A8CBAF"/>
+    <path d="M26 353c105-25 172-13 246 5 90 22 182 10 254-11 44-13 77-11 102-4v125H26V353Z" fill="#6FA17B"/>
+
+    <ellipse cx="326" cy="404" rx="226" ry="29" fill="#164A32" opacity=".14" filter="url(#softShadow)"/>
+
+    <!-- Trees and greenery -->
+    <g>
+      <path d="M79 316h12v55H79z" fill="#916E4D"/>
+      <circle cx="85" cy="273" r="35" fill="#397B55"/>
+      <circle cx="64" cy="290" r="23" fill="#4D9060"/>
+      <circle cx="104" cy="294" r="25" fill="#2F704C"/>
+      <circle cx="82" cy="253" r="18" fill="#5A9B68"/>
+    </g>
+    <g>
+      <path d="M556 304h11v60h-11z" fill="#916E4D"/>
+      <circle cx="562" cy="264" r="33" fill="#397B55"/>
+      <circle cx="542" cy="281" r="22" fill="#4D9060"/>
+      <circle cx="580" cy="283" r="24" fill="#2F704C"/>
+      <circle cx="561" cy="245" r="18" fill="#5A9B68"/>
+    </g>
+
+    <!-- Homes set into a shared neighborhood landscape -->
+    <g>
+      <path d="M103 261 169 216l67 45v104H103V261Z" fill="#F5F0E4"/>
+      <path d="m91 263 78-58 79 58-10 12-69-48-68 48-10-12Z" fill="#174B35"/>
+      <path d="m119 250 47-34 35 23-48 35-34-24Z" fill="url(#panel)" stroke="#D8E9D7" stroke-width="2"/>
+      <path d="m135 256 48-34M151 267l48-34M132 241l34 24M150 228l34 24M169 215l33 23" stroke="#8DB8A7" stroke-width="1.5" opacity=".8"/>
+      <rect x="119" y="282" width="35" height="39" rx="5" fill="#BFE0E8"/>
+      <path d="M136.5 282v39M119 301.5h35" stroke="#FFFDF5" stroke-width="4"/>
+      <rect x="177" y="286" width="37" height="79" rx="7" fill="#D9A95C"/>
+      <path d="M184 299h23v24h-23z" fill="#F8D77B"/>
+      <path d="M195.5 299v24M184 311h23" stroke="#FFF5D8" stroke-width="3"/>
+    </g>
+
+    <g>
+      <path d="M235 239 330 174l97 65v129H235V239Z" fill="url(#homeWall)"/>
+      <path d="m219 242 111-82 113 82-13 16-100-70-98 70-13-16Z" fill="#123B2A"/>
+      <path d="m251 225 59-43 37 26-60 44-36-27Z" fill="url(#panel)" stroke="#D8E9D7" stroke-width="2.5"/>
+      <path d="m272 237 60-44M293 252l60-44M291 197l36 26M311 182l37 27M331 168l37 27" stroke="#8DB8A7" stroke-width="1.7" opacity=".82"/>
+      <path d="m337 208 30-22 56 40-29 21-57-39Z" fill="url(#panel)" stroke="#D8E9D7" stroke-width="2.5"/>
+      <path d="m355 220 30-22M374 233l30-22M354 196l54 38M367 186l55 38" stroke="#8DB8A7" stroke-width="1.5" opacity=".82"/>
+      <rect x="258" y="264" width="43" height="46" rx="6" fill="#B7DDE4"/>
+      <path d="M279.5 264v46M258 287h43" stroke="#FFFDF5" stroke-width="4"/>
+      <rect x="356" y="265" width="43" height="46" rx="6" fill="#B7DDE4"/>
+      <path d="M377.5 265v46M356 288h43" stroke="#FFFDF5" stroke-width="4"/>
+      <path d="M310 367v-68c0-12 9-21 20-21s20 9 20 21v68" fill="#D6A15B"/>
+      <path d="M321 327h18v20h-18z" fill="#F6D36E"/>
+      <circle cx="299" cy="319" r="3" fill="#F8D77B"/>
+      <circle cx="409" cy="321" r="3" fill="#F8D77B"/>
+    </g>
+
+    <g>
+      <path d="M416 266 476 224l62 42v96H416v-96Z" fill="#F4EBDD"/>
+      <path d="m405 268 71-53 72 53-10 12-62-45-61 45-10-12Z" fill="#20553A"/>
+      <path d="m442 252 39-28 33 23-40 29-32-24Z" fill="url(#panel)" stroke="#D8E9D7" stroke-width="2"/>
+      <path d="m459 264 40-29M477 276l40-29M461 239l33 24M480 225l34 23" stroke="#8DB8A7" stroke-width="1.5" opacity=".8"/>
+      <rect x="430" y="283" width="31" height="37" rx="5" fill="#B7DDE4"/>
+      <path d="M445.5 283v37M430 301.5h31" stroke="#FFFDF5" stroke-width="3.5"/>
+      <rect x="482" y="284" width="37" height="78" rx="6" fill="#D9A95C"/>
+      <path d="M489 296h23v23h-23z" fill="#F8D77B"/>
+      <path d="M500.5 296v23M489 307.5h23" stroke="#FFF5D8" stroke-width="3"/>
+    </g>
+
+    <!-- Subtle home energy storage cabinet -->
+    <g>
+      <rect x="524" y="320" width="38" height="63" rx="8" fill="#F7F8F3" stroke="#78A987" stroke-width="2"/>
+      <rect x="532" y="313" width="22" height="9" rx="4.5" fill="#218653"/>
+      <path d="m546 334-9 14h7l-3 12 10-16h-7l2-10Z" fill="#DDB445"/>
+      <path d="M532 370h22" stroke="#BDD6C0" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Everyday life in a bright, connected neighborhood -->
+    <g>
+      <circle cx="285" cy="350" r="8" fill="#A96546"/>
+      <path d="M276 360c2-6 16-6 18 0l5 20h-28l5-20Z" fill="#218653"/>
+      <path d="m278 379-5 20M291 379l7 20" stroke="#123B2A" stroke-width="5" stroke-linecap="round"/>
+      <path d="M273 366h-8" stroke="#B8E986" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="320" cy="361" r="6" fill="#8C573F"/>
+      <path d="M313 369c2-5 12-5 14 0l4 15h-22l4-15Z" fill="#E3B84F"/>
+      <path d="m315 383-3 15M325 383l4 15" stroke="#123B2A" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Low garden plants and a curved neighborhood path -->
+    <path d="M33 405c83-24 152-22 219-8 85 18 151 18 229-2 49-13 91-10 126 1v72H33v-63Z" fill="#5E966A" opacity=".65"/>
+    <path d="M285 468c5-38 10-60 24-79 12-16 27-24 48-31" stroke="#F2D990" stroke-width="18" stroke-linecap="round" opacity=".95"/>
+    <path d="M285 468c5-38 10-60 24-79 12-16 27-24 48-31" stroke="#FAE9B4" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#3D8055">
+      <ellipse cx="52" cy="391" rx="18" ry="8" transform="rotate(-22 52 391)"/>
+      <ellipse cx="72" cy="402" rx="20" ry="8" transform="rotate(18 72 402)" fill="#78A85D"/>
+      <ellipse cx="579" cy="397" rx="19" ry="8" transform="rotate(-18 579 397)" fill="#78A85D"/>
+      <ellipse cx="554" cy="407" rx="19" ry="8" transform="rotate(20 554 407)"/>
+    </g>
+    <circle cx="236" cy="400" r="3" fill="#F8D77B"/>
+    <circle cx="449" cy="390" r="3" fill="#F8D77B"/>
+  </g>
+</svg>
