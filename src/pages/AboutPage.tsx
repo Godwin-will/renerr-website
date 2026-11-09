@@ -79,8 +79,8 @@ export const AboutPage: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden border border-brand-dark/10 shadow-xl bg-white p-2">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1548611716-ad383fb58cba?auto=format&fit=crop&w=900&q=80"
-                  alt="Modern clean energy development and engineering in Africa"
+                  src="https://images.unsplash.com/photo-1768839727824-28d6f0dcd1d1?auto=format&fit=crop&w=1200&q=85"
+                  alt="Solar panels in a field capturing sunlight to expand access to clean electricity"
                   fallbackText="Clean Energy Engineering & Field Development"
                   className="w-full h-80 sm:h-96 object-cover rounded-2xl"
                 />

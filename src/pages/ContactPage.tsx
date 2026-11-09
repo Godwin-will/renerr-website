@@ -186,7 +186,6 @@ export const ContactPage: React.FC = () => {
                     <p className="text-sm font-semibold text-brand-dark mt-0.5">
                       {siteConfig.contact.addressDisplay}
                     </p>
-                    <p className="text-xs text-brand-muted mt-0.5">Nigeria</p>
                   </div>
                 </div>
 

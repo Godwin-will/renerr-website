@@ -14,7 +14,6 @@ import {
   FileCheck,
   CreditCard,
   BarChart3,
-  Clock,
   Info,
 } from 'lucide-react';
 
@@ -323,20 +322,8 @@ export const HowItWorksPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Development Status Banner: Strictly no app store or download buttons */}
-          <div className="max-w-2xl mx-auto p-4 rounded-2xl bg-white border border-brand-dark/10 shadow-sm text-center space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wider">
-              <Clock className="w-3.5 h-3.5" />
-              <span>In Active Development</span>
-            </div>
-            <p className="text-xs sm:text-sm text-brand-charcoal/90 leading-relaxed">
-              RENERR is currently under development. More information about availability will be
-              announced as we progress.
-            </p>
-          </div>
-
           {/* Conceptual Capabilities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {appFeatures.map((feat, i) => {
               const IconComp = feat.icon;
               return (

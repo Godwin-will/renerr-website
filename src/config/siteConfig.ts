@@ -100,7 +100,7 @@ export const siteConfig: SiteConfig = {
     email: "info@renerrenergies.com",
     phone: "",
     whatsappNumber: "",
-    addressDisplay: "Headquartered in Nigeria • Operating with an Africa-wide vision",
+    addressDisplay: "Lagos, Nigeria",
     officeHours: "Monday – Friday: 8:00 AM – 5:00 PM (WAT)",
   },
 
