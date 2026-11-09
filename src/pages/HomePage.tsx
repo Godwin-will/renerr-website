@@ -10,7 +10,7 @@ import {
   HeartHandshake,
   TrendingUp,
 } from 'lucide-react';
-import { HeroAppPreview } from '../components/common/HeroAppPreview';
+import { HeroEnergyAccessSchematic } from '../components/common/HeroEnergyAccessSchematic';
 
 export const HomePage: React.FC = () => {
   return (
@@ -73,9 +73,9 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Conceptual RENERR app preview */}
+            {/* RENERR clean-energy access ecosystem */}
             <div className="lg:col-span-5">
-              <HeroAppPreview />
+              <HeroEnergyAccessSchematic />
             </div>
           </div>
         </div>
