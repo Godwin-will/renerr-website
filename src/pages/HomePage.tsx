@@ -1,18 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Zap,
   Users,
   Coins,
   ArrowRight,
   Sparkles,
   Smartphone,
-  ShieldCheck,
   GraduationCap,
   HeartHandshake,
   TrendingUp,
-  Activity,
-  Layers,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
@@ -174,133 +170,6 @@ export const HomePage: React.FC = () => {
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
                 <span>The RENERR Platform</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ======================================================== */}
-      {/* 4. SECTION: INTRODUCING RENERR                           */}
-      {/* ======================================================== */}
-      <section className="py-20 bg-white border-b border-brand-dark/5 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Description */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-dark text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-brand-primary" />
-                <span>The Digital Platform</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-                Energy Access, Connected.
-              </h2>
-
-              <p className="text-base sm:text-lg text-brand-charcoal/80 leading-relaxed">
-                RENERR is our digital platform designed to connect people to energy opportunities and
-                make participation in energy services simpler.
-              </p>
-
-              <div className="space-y-3 pt-2">
-                {[
-                  'Discover or join suitable community energy projects',
-                  'Coordinate pooled contributions securely',
-                  'Monitor energy balances and service status',
-                  'Streamline account management and support',
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 text-sm text-brand-charcoal font-medium">
-                    <div className="w-5 h-5 rounded-full bg-brand-light text-brand-primary flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-3 h-3" />
-                    </div>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-4 rounded-2xl bg-brand-cream border border-brand-dark/10 text-xs text-brand-muted leading-relaxed">
-                <strong>Platform Notice: </strong> RENERR is currently under development. Conceptual
-                screens reflect the planned customer experience. More information about availability
-                will be announced as we progress.
-              </div>
-
-              <div className="pt-2">
-                <Link
-                  to="/how-it-works"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] shadow-sm transition-all"
-                >
-                  <span>Discover How It Works</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Mockup Style Product Preview */}
-            <div className="lg:col-span-6">
-              <div className="bg-brand-dark text-white rounded-3xl p-6 sm:p-8 border border-brand-primary/30 shadow-2xl space-y-6">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-brand-primary text-brand-accent flex items-center justify-center font-bold text-sm">
-                      R
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">RENERR Platform</h4>
-                      <p className="text-[11px] text-gray-400">Concept UI &bull; Under Development</p>
-                    </div>
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-brand-accent/20 text-brand-accent border border-brand-accent/30">
-                    Preview
-                  </span>
-                </div>
-
-                {/* Conceptual UI Preview Cards */}
-                <div className="space-y-3">
-                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-brand-accent flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5" />
-                        Community Energy Cluster
-                      </span>
-                      <span className="text-[11px] text-emerald-400 font-medium">Formed &bull; Active</span>
-                    </div>
-                    <p className="text-sm font-bold text-white">Greenfield Estate Solar Micro-Grid</p>
-                    <div className="flex items-center justify-between text-xs text-gray-300 pt-1">
-                      <span>16 Participating Households</span>
-                      <span>Shared System Capacity: 15 kWp</span>
-                    </div>
-                  </div>
-
-                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-brand-accent flex items-center gap-1.5">
-                        <Activity className="w-3.5 h-3.5" />
-                        Energy Service Account
-                      </span>
-                      <span className="text-[11px] text-gray-300">Operational</span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3 pt-1">
-                      <div className="bg-black/30 p-2.5 rounded-xl">
-                        <span className="text-[10px] text-gray-400 block">Available Energy</span>
-                        <span className="text-sm font-bold text-white">Active Service</span>
-                      </div>
-                      <div className="bg-black/30 p-2.5 rounded-xl">
-                        <span className="text-[10px] text-gray-400 block">System Health</span>
-                        <span className="text-sm font-bold text-emerald-400">99.8% Uptime</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-2 flex items-center justify-between text-xs text-gray-400">
-                  <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-brand-accent" />
-                    Structured for Africa-Wide Deployment
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Layers className="w-3.5 h-3.5" />
-                    Multi-Tenant Architecture
-                  </span>
-                </div>
               </div>
             </div>
           </div>
