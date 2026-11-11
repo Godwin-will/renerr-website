@@ -11,12 +11,27 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://renerrenergies.com/solutions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://renerrenergies.com/energy-requirement-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://renerrenergies.com/careers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://renerrenergies.com/how-it-works</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://renerrenergies.com/impact</loc>
+    <loc>https://renerrenergies.com/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

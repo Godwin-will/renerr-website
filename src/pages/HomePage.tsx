@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Users,
-  Coins,
   ArrowRight,
   Sparkles,
-  Smartphone,
   GraduationCap,
+  Sun,
   HeartHandshake,
+  Smartphone,
   TrendingUp,
 } from 'lucide-react';
 
@@ -24,23 +24,23 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-brand-primary" />
-                <span>Clean Energy-Tech Startup</span>
+                <span>Expanding Energy Access</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.1]">
-                Making Reliable Energy More Accessible.
+                Making Reliable Energy More Accessible Across Africa.
               </h1>
 
               <p className="text-base sm:text-lg text-brand-charcoal/80 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                Renerr combines clean energy solutions, innovative co-financing and digital
-                technology to help individuals, communities and businesses access reliable
-                electricity.
+                Renerr Energies is developing practical residential and community-based solar
+                solutions designed around the energy needs, participation and realities of the people
+                we serve.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link
-                  to="/how-it-works"
+                  to="/solutions"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] shadow-sm transition-all duration-200 hover:shadow-md hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
                   <span>Explore RENERR</span>
@@ -59,15 +59,15 @@ export const HomePage: React.FC = () => {
               <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-brand-charcoal/80 font-medium">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  Shared Community Investment
+                  Residential Energy Planning
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-brand-primary" />
-                  Flexible Co-Financing
+                  Community-Based Solutions
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
-                  Digital Coordination Platform
+                  Practical Project Development
                 </span>
               </div>
             </div>
@@ -106,8 +106,8 @@ export const HomePage: React.FC = () => {
 
           <p className="text-base sm:text-lg text-brand-charcoal/80 leading-relaxed max-w-2xl mx-auto">
             For many households and businesses, the cost of accessing reliable electricity remains a
-            major challenge. Renerr is developing more accessible ways for people to participate in
-            energy solutions through shared investment, flexible financing and technology.
+            major challenge. Renerr is developing residential and community-based solar solutions
+            around local energy requirements and practical access needs.
           </p>
         </div>
       </section>
@@ -125,45 +125,45 @@ export const HomePage: React.FC = () => {
               A Smarter Way to Access Energy.
             </h2>
             <p className="text-sm sm:text-base text-brand-muted">
-              We replace high upfront financial friction with practical co-financing models and
-              digital coordination.
+              We are developing practical energy solutions through household planning, community
+              coordination and project development.
             </p>
           </div>
 
           {/* Three Simple Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1: Shared Investment */}
+            {/* Card 1: Community energy solutions */}
             <div className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary flex items-center justify-center">
                   <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-brand-dark">Shared Investment</h3>
+                <h3 className="text-xl font-bold text-brand-dark">Community-Based Energy</h3>
                 <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  We enable people within suitable communities to participate in shared energy
-                  projects rather than placing the entire financial burden on one household.
+                  Renerr is developing shared solar-plus-battery solutions for technically suitable
+                  groups of nearby households.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>Community Clusters</span>
+                <span>In development</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </div>
 
-            {/* Card 2: Flexible Co-financing */}
+            {/* Card 2: Residential energy planning */}
             <div className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary flex items-center justify-center">
-                  <Coins className="w-6 h-6" />
+                  <Sun className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-brand-dark">Flexible Co-financing</h3>
+                <h3 className="text-xl font-bold text-brand-dark">Residential Energy Planning</h3>
                 <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  We explore structured payment arrangements that make energy projects more
-                  financially accessible to businesses, organisations and other customers.
+                  We help households consider their daily energy needs, backup duration and suitable
+                  solar, battery and inverter capacities.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>Commercial & Institutional</span>
+                <span>Plan your requirements</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </div>
@@ -176,12 +176,12 @@ export const HomePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-brand-dark">Technology-Enabled Access</h3>
                 <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  Our digital platform is being developed to simplify customer participation,
-                  coordinate contributions and help users manage their electricity services.
+                  Our approach combines technical assessment, solution design, project coordination
+                  and appropriate technology.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>The RENERR Platform</span>
+                <span>Energy access development</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </div>
@@ -196,14 +196,14 @@ export const HomePage: React.FC = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-center">
           <div className="space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">
-              Social & Community Responsibility
+              Planned Initiatives
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-              Beyond Energy Access.
+              Energy Education and Community Outreach.
             </h2>
             <p className="text-base text-brand-charcoal/80 max-w-2xl mx-auto leading-relaxed">
-              We believe expanding energy access goes hand in hand with empowering communities,
-              supporting education and creating opportunities.
+              Renerr is planning an educational outreach initiative focused on energy access,
+              renewable energy, electricity use and energy efficiency.
             </p>
           </div>
 
@@ -212,12 +212,10 @@ export const HomePage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-primary flex items-center justify-center">
                 <GraduationCap className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-brand-dark">
-                RENERR Energy Awareness Initiative
-              </h3>
+              <h3 className="text-lg font-bold text-brand-dark">Planned Educational Outreach</h3>
               <p className="text-sm text-brand-muted leading-relaxed">
-                Our educational outreach engages secondary school students on renewable energy
-                technologies, sustainability principles, and future clean tech opportunities.
+                The proposed initiative aims to improve awareness among young people and local
+                communities. Details will be shared as they are confirmed.
               </p>
             </div>
 
@@ -225,22 +223,20 @@ export const HomePage: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-primary flex items-center justify-center">
                 <HeartHandshake className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-brand-dark">
-                Community Inclusion & Clean Growth
-              </h3>
+              <h3 className="text-lg font-bold text-brand-dark">Developing Practical Solutions</h3>
               <p className="text-sm text-brand-muted leading-relaxed">
-                Committed to supporting initiatives that improve electricity access in underserved
-                areas, creating practical economic opportunity and reducing local fossil fuel dependency.
+                We are developing residential and community-based energy approaches intended to
+                improve access to reliable and affordable electricity.
               </p>
             </div>
           </div>
 
           <div className="pt-2">
             <Link
-              to="/impact"
+              to="/projects"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-white border border-brand-dark/15 text-brand-dark hover:border-brand-primary hover:bg-brand-light/50 transition-all shadow-sm"
             >
-              <span>Explore Our Impact</span>
+              <span>Explore Projects</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

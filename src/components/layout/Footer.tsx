@@ -6,7 +6,6 @@ import {
   MessageCircle,
   MapPin,
   ArrowUp,
-  Sparkles,
   ExternalLink,
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
@@ -34,20 +33,19 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-primary/40 text-brand-accent mb-2">
-                <Sparkles className="w-3 h-3" />
-                <span>Clean Energy-Tech Startup</span>
+                <span>Energy Access</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Making Reliable Energy More Accessible.
               </h3>
               <p className="text-sm text-gray-300 mt-1 max-w-xl leading-relaxed">
-                Renerr combines clean energy solutions, innovative co-financing and digital technology
-                to help individuals, communities and businesses access reliable electricity.
+                Renerr Energies is developing practical residential and community-based solar
+                solutions to make reliable and affordable electricity more accessible.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
               <Link
-                to="/how-it-works"
+                to="/solutions"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
               >
                 Explore RENERR
@@ -70,9 +68,8 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             <Logo variant="light" size="md" />
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm">
-              Renerr is a clean energy-tech startup committed to making affordable and reliable
-              electricity more accessible across Africa through innovative co-financing and digital
-              technology.
+              Renerr Energies is working to expand access to reliable and affordable electricity
+              through practical energy solutions designed around local needs.
             </p>
             <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300 max-w-sm">
               <span className="font-semibold text-brand-accent">Platform in development: </span>
@@ -92,30 +89,12 @@ export const Footer: React.FC = () => {
                   Home
                 </Link>
               </li>
+              <li><Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
+              <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
+              <li><Link to="/energy-requirement-calculator" className="hover:text-white transition-colors">Energy Requirement Calculator</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/how-it-works" className="hover:text-white transition-colors">
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link to="/impact" className="hover:text-white transition-colors">
-                  Our Impact
-                </Link>
-              </li>
-              <li>
-                <Link to="/partner" className="hover:text-white transition-colors">
-                  Partner With Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
-                  Contact Us
-                </Link>
+                <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -176,18 +155,7 @@ export const Footer: React.FC = () => {
       {/* Disclaimers & Legal Notice Band */}
       <div className="border-t border-white/10 bg-brand-dark/80 text-[11px] text-gray-400 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
-          <p>
-            <strong className="text-gray-300">Platform Notice: </strong>
-            RENERR is currently under development. Availability and features will be announced as we
-            progress. The website does not provide direct application downloads.
-          </p>
-          <p>
-            <strong className="text-gray-300">Co-financing & Terms: </strong>
-            Co-financing and payment arrangements are subject to project requirements, technical
-            feasibility, and mutually agreed terms. Terms vary by project and do not represent a
-            guaranteed offer. Community eligibility and geographical coverage depend on technical and
-            economic feasibility.
-          </p>
+          <p>Renerr is developing energy-access solutions. Availability and project details will be shared as they are confirmed.</p>
         </div>
       </div>
 

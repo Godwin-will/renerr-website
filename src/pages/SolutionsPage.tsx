@@ -1,0 +1,29 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BatteryCharging, Home, Sun } from 'lucide-react';
+
+const bullets = ['Identifying technically suitable groups of nearby households', 'Assessing collective electricity demand and required solar and battery capacity', 'Establishing transparent household contributions and agreed shared access or ownership', 'Planning responsibilities for operation, maintenance and long-term sustainability'];
+
+export const SolutionsPage: React.FC = () => {
+  return <div>
+    <section className="bg-brand-dark text-white py-16 lg:py-20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl space-y-4"><p className="text-xs font-bold uppercase tracking-widest text-brand-accent">Our Solutions</p><h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">Practical Energy Solutions, Built Around People.</h1><p className="text-base sm:text-lg text-gray-300 leading-relaxed">Renerr is developing residential and community-based approaches to make reliable electricity more accessible.</p></div></section>
+    <section className="py-16 sm:py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <article className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center rounded-3xl bg-brand-cream p-6 sm:p-10">
+        <div className="space-y-5"><div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary grid place-items-center"><Home/></div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Residential Energy Solutions</p><h2 className="text-2xl sm:text-3xl font-bold text-brand-dark">Solar Energy Solutions for Homes</h2><p className="text-sm sm:text-base leading-relaxed text-brand-charcoal/80">Every household has different electricity needs. Renerr's residential approach focuses on helping households understand their energy requirements and identify suitable solar photovoltaic and battery-storage configurations.</p>
+          <ul className="space-y-2 text-sm text-brand-charcoal/80">{['Household appliances and electricity consumption', 'Daily energy requirements and desired backup duration', 'Available installation space and site conditions', 'Appropriate solar panel, battery and inverter capacity'].map(item=><li key={item} className="flex gap-2"><span className="text-brand-primary">✓</span>{item}</li>)}</ul>
+          <p className="text-sm text-brand-muted">The objective is to help households identify systems better matched to their actual electricity needs.</p>
+          <Link to="/energy-requirement-calculator" className="inline-flex items-center gap-2 rounded-xl bg-brand-accent px-5 py-3 text-sm font-bold text-brand-dark">Calculate Your Energy Requirements <ArrowRight size={16}/></Link>
+        </div>
+        <div className="min-h-64 rounded-3xl bg-white border border-brand-dark/10 p-8 flex flex-col justify-center items-center gap-5 text-center"><div className="flex gap-4 items-end"><Sun className="w-14 h-14 text-amber-400"/><div className="grid grid-cols-3 gap-1 rounded-lg bg-brand-dark p-2 rotate-[-6deg]">{Array.from({length:9},(_,i)=><span key={i} className="h-6 w-8 rounded-sm bg-brand-primary"/>)}</div><BatteryCharging className="w-12 h-12 text-brand-primary"/></div><p className="font-semibold text-brand-dark">Plan around your household’s energy needs</p><p className="text-xs text-brand-muted">Illustrative planning visual</p></div>
+      </article>
+      <article className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center rounded-3xl border border-brand-dark/10 p-6 sm:p-10">
+        <div className="order-2 lg:order-1 min-h-64 rounded-3xl bg-brand-light p-8 flex flex-col justify-center items-center gap-6"><div className="flex items-end gap-3">{[0,1,2].map(i=><div key={i} className={`w-16 h-20 rounded-t-xl border-2 border-brand-primary bg-white relative ${i===1?'h-28':''}`}><div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-3 rounded-t-md bg-brand-primary"/></div>)}</div><div className="grid grid-cols-3 gap-2">{Array.from({length:6},(_,i)=><span key={i} className="h-3 w-8 rounded bg-brand-primary/70"/>)}</div><p className="text-xs text-brand-muted">Conceptual shared-energy illustration</p></div>
+        <div className="order-1 lg:order-2 space-y-5"><div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary grid place-items-center"><BatteryCharging/></div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Community-Based Energy Solutions</p><h2 className="text-2xl sm:text-3xl font-bold text-brand-dark">Community-Led Shared Solar Solutions</h2>
+          <p className="text-sm sm:text-base leading-relaxed text-brand-charcoal/80">Reliable electricity can be more accessible when households work together. Renerr is developing a community-based model in which households within a technically suitable area collectively contribute towards financing and developing a shared solar-plus-battery energy system that supplies their homes. Rather than each household independently financing an entire installation, participating households pool their contributions towards shared infrastructure.</p>
+          <p className="font-semibold text-brand-dark">The proposed model is built around:</p><ul className="space-y-2 text-sm text-brand-charcoal/80">{bullets.map(item=><li key={item} className="flex gap-2"><span className="text-brand-primary">✓</span>{item}</li>)}</ul>
+          <p className="text-sm leading-relaxed text-brand-muted">Renerr's role is to help develop and coordinate the solution, including technical assessment and project planning.</p><Link to="/contact" className="inline-flex items-center gap-2 rounded-xl bg-brand-dark px-5 py-3 text-sm font-bold text-white">Discuss a Community Energy Project <ArrowRight size={16}/></Link>
+        </div>
+      </article>
+    </div></section>
+  </div>;
+};
