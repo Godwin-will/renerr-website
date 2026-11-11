@@ -97,7 +97,7 @@ export const siteConfig: SiteConfig = {
   },
 
   contact: {
-    email: "info@renerrenergies.com",
+    email: "notifications@renerrenergies.com",
     phone: "",
     whatsappNumber: "",
     addressDisplay: "Lagos, Nigeria",

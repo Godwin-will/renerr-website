@@ -142,10 +142,10 @@ export const PrivacyPage: React.FC = () => {
                 <p className="text-brand-muted">
                   Email:{' '}
                   <a
-                    href={`mailto:${siteConfig.contact.email || 'info@renerrenergies.com'}`}
+                    href={`mailto:${siteConfig.contact.email || 'notifications@renerrenergies.com'}`}
                     className="text-brand-primary underline"
                   >
-                    {siteConfig.contact.email || 'info@renerrenergies.com'}
+                    {siteConfig.contact.email || 'notifications@renerrenergies.com'}
                   </a>
                 </p>
                 <p className="text-brand-muted">Jurisdiction: {siteConfig.country}</p>

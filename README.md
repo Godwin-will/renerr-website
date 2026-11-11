@@ -60,7 +60,7 @@ Update your business details and form endpoints in one place:
 
 ```typescript
 contact: {
-  email: "info@renerrenergies.com",
+  email: "notifications@renerrenergies.com",
   phone: "+234 803 000 0000",
   whatsappNumber: "2348030000000", // International format digits only
   addressDisplay: "Headquartered in Nigeria • Operating with an Africa-wide vision",

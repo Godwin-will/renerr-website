@@ -53,7 +53,7 @@ export async function handleFormSubmission(
         success: false,
         status: 'error',
         message:
-          'Network connection error. Please send your enquiry directly to info@renerrenergies.com.',
+          'Network connection error. Please send your enquiry directly to notifications@renerrenergies.com.',
       };
     }
   }
@@ -71,7 +71,7 @@ export async function handleFormSubmission(
 
   const emailBody = `Hello Renerr Energies Team,\n\nI am submitting an enquiry through your website:\n\n${formattedSummary}\n\nThank you.`;
 
-  const targetEmail = siteConfig.contact.email || 'info@renerrenergies.com';
+  const targetEmail = siteConfig.contact.email || 'notifications@renerrenergies.com';
   const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(emailBody)}`;

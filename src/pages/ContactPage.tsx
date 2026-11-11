@@ -139,10 +139,10 @@ export const ContactPage: React.FC = () => {
                     </h3>
                     <p className="text-sm font-semibold text-brand-dark mt-0.5">
                       <a
-                        href={`mailto:${siteConfig.contact.email || 'info@renerrenergies.com'}`}
+                        href={`mailto:${siteConfig.contact.email || 'notifications@renerrenergies.com'}`}
                         className="hover:text-brand-primary transition-colors break-all"
                       >
-                        {siteConfig.contact.email || 'info@renerrenergies.com'}
+                        {siteConfig.contact.email || 'notifications@renerrenergies.com'}
                       </a>
                     </p>
                     <p className="text-xs text-brand-muted mt-0.5">Monitored during business hours</p>
