@@ -2,9 +2,8 @@
  * Centralized Site Configuration for Renerr Energies Ltd
  * 
  * Positioning:
- * Renerr is a clean energy-tech startup committed to making affordable and reliable
- * electricity more accessible by combining clean energy solutions, innovative co-financing,
- * and digital technology.
+ * Renerr Energies is an energy-access company developing practical solutions to make
+ * reliable and affordable electricity more accessible across Africa.
  */
 
 export interface SiteConfig {
@@ -74,17 +73,17 @@ export const siteConfig: SiteConfig = {
   country: "Nigeria",
   region: "Africa",
   siteUrl: "https://renerrenergies.com",
-  coreMessage: "Renerr uses clean energy, innovative co-financing and technology to make reliable electricity more accessible.",
+  coreMessage: "Renerr Energies is developing practical solutions to make reliable electricity more accessible.",
   tagline: "Making Reliable Energy More Accessible.",
-  positioningStatement: "Renerr combines clean energy solutions, innovative co-financing and digital technology to help individuals, communities and businesses access reliable electricity.",
+  positioningStatement: "Renerr Energies is developing practical residential and community-based solar solutions to make reliable and affordable electricity more accessible across Africa.",
   mission: "To reduce energy poverty and expand access to affordable, reliable electricity across Africa through innovation, practical solutions and strategic partnerships.",
   vision: "An Africa where access to reliable electricity enables every individual, household, business and community to realise its full potential.",
   guidingBelief: "Reliable electricity is a foundation for opportunity, productivity and human development. We believe access to energy should not be limited by income or geography.",
-  brandPromise: "Making reliable electricity more accessible through clean energy, innovative co-financing and digital technology.",
+  brandPromise: "Making reliable and affordable electricity more accessible through practical energy solutions.",
   
   coFinancing: {
-    householdsText: "Through our community-based approach, residents within suitable localities can come together to participate in shared energy projects. Instead of one household carrying the entire investment alone, participating residents can pool their contributions towards accessing shared energy infrastructure.",
-    businessesText: "We also work towards making energy projects more accessible to businesses and organisations through structured co-financing and flexible payment arrangements. Depending on the project, customers may make an initial contribution and settle the remaining balance over an agreed period.",
+    householdsText: "Renerr is developing a community-based approach in which residents in technically suitable localities can plan shared energy projects. Participating households may pool contributions towards shared infrastructure under agreed access or ownership arrangements.",
+    businessesText: "Renerr is exploring ways to make energy projects more accessible to businesses and organisations through structured co-financing and flexible payment arrangements, subject to project requirements, feasibility and mutually agreed terms.",
     appDescription: "RENERR is being developed as the digital platform through which users will discover energy opportunities, participate in shared energy arrangements, coordinate contributions and manage their electricity services.",
   },
 
@@ -92,7 +91,7 @@ export const siteConfig: SiteConfig = {
     awarenessInitiative: {
       name: "RENERR Energy Awareness Initiative",
       focus: "Educational outreach for secondary school students",
-      description: "An educational initiative engaging secondary school students on renewable energy technologies, energy sustainability, electricity access, and future energy opportunities.",
+      description: "A planned educational outreach initiative focused on renewable energy, energy sustainability, electricity access and future energy opportunities.",
     },
   },
 

@@ -29,8 +29,8 @@ export const AboutPage: React.FC = () => {
               Rethinking How People Access Energy.
             </h1>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              We are a clean energy-tech startup committed to breaking down financial barriers and
-              expanding access to reliable electricity across Africa.
+              Renerr Energies is an energy-access company working to reduce energy poverty and
+              expand access to affordable, reliable electricity across Africa.
             </p>
           </div>
         </div>
@@ -52,8 +52,8 @@ export const AboutPage: React.FC = () => {
               </h2>
               <div className="space-y-4 text-base text-brand-charcoal/85 leading-relaxed">
                 <p>
-                  Renerr is a clean energy-tech startup working to make reliable electricity more
-                  accessible through innovative co-financing approaches and digital technology.
+                  Renerr Energies is an energy-access company developing practical residential and
+                  community-based solar solutions to make reliable electricity more accessible.
                 </p>
                 <p>
                   We believe that access to energy should not be determined solely by an individual's
@@ -108,8 +108,8 @@ export const AboutPage: React.FC = () => {
               Making Energy Investment More Accessible.
             </h2>
             <p className="text-base text-brand-charcoal/80 leading-relaxed">
-              High upfront equipment costs keep clean electricity out of reach for too many. We
-              structure cooperative and flexible models that distribute investment sensibly.
+              High upfront equipment costs keep clean electricity out of reach for too many. We are
+              developing cooperative and flexible approaches to make energy solutions more accessible.
             </p>
           </div>
 
@@ -124,21 +124,21 @@ export const AboutPage: React.FC = () => {
                   For Households and Communities
                 </h3>
                 <p className="text-sm sm:text-base text-brand-charcoal/85 leading-relaxed">
-                  Through our community-based approach, residents within suitable localities can come
-                  together to participate in shared energy projects. Instead of one household
-                  carrying the entire investment alone, participating residents can pool their
-                  contributions towards accessing shared energy infrastructure.
+                  Renerr is developing a community-based approach in which residents in technically
+                  suitable localities can plan shared energy projects. Participating households may
+                  pool contributions towards shared infrastructure under agreed access or ownership
+                  arrangements.
                 </p>
               </div>
 
               <div className="pt-4 border-t border-brand-dark/10 space-y-2 text-xs text-brand-muted">
                 <div className="flex items-center gap-2 text-brand-charcoal font-medium">
                   <CheckCircle2 className="w-4 h-4 text-brand-primary" />
-                  <span>Reduces individual capital burden</span>
+                  <span>Designed to reduce individual upfront burden</span>
                 </div>
                 <div className="flex items-center gap-2 text-brand-charcoal font-medium">
                   <CheckCircle2 className="w-4 h-4 text-brand-primary" />
-                  <span>Enables localized shared micro-grids</span>
+                  <span>Planned shared energy infrastructure</span>
                 </div>
               </div>
             </div>
@@ -153,21 +153,21 @@ export const AboutPage: React.FC = () => {
                   For Businesses and Organisations
                 </h3>
                 <p className="text-sm sm:text-base text-brand-charcoal/85 leading-relaxed">
-                  We also work towards making energy projects more accessible to businesses and
+                  We are also exploring ways to make energy projects more accessible to businesses and
                   organisations through structured co-financing and flexible payment arrangements.
-                  Depending on the project, customers may make an initial contribution and settle the
-                  remaining balance over an agreed period.
+                  Any arrangements would depend on project requirements, feasibility and mutually
+                  agreed terms.
                 </p>
               </div>
 
               <div className="pt-4 border-t border-brand-dark/10 space-y-2 text-xs text-brand-muted">
                 <div className="flex items-center gap-2 text-brand-charcoal font-medium">
                   <CheckCircle2 className="w-4 h-4 text-brand-primary" />
-                  <span>Preserves vital operating cash flows</span>
+                  <span>May help preserve operating cash flow</span>
                 </div>
                 <div className="flex items-center gap-2 text-brand-charcoal font-medium">
                   <CheckCircle2 className="w-4 h-4 text-brand-primary" />
-                  <span>Bespoke payment periods based on feasibility</span>
+                  <span>Any terms would depend on project feasibility</span>
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@ export const AboutPage: React.FC = () => {
             Join Us in Expanding Clean Energy Access
           </h2>
           <p className="text-sm sm:text-base text-brand-charcoal/80 max-w-xl mx-auto leading-relaxed">
-            Discover how our digital platform coordinates shared energy or explore strategic
+            Learn how Renerr is developing practical energy-access solutions or explore strategic
             collaboration with Renerr Energies.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -278,7 +278,7 @@ export const AboutPage: React.FC = () => {
               to="/how-it-works"
               className="px-6 py-3 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors shadow-sm"
             >
-              Explore RENERR Platform
+              Explore Our Approach
             </Link>
             <Link
               to="/partner"

@@ -24,9 +24,10 @@ Production-quality, modern, lightweight website for **Renerr Energies Ltd**, an 
 - **`HomePage` (`/`)**: High-impact hero, *"Reliable Electricity Should Not Be a Privilege"* challenge analysis, *"Expanding Energy Access. Unlocking Human Potential"* mission statement, 4-pillar flexible approach, comprehensive impact ambition across diverse sectors, African commitment statement, and partnership call-to-action.
 - **`About Us` (`/about`)**: Origin story, permanent mission vs. evolving programmes, long-term vision, core beliefs, 6 guiding values (*Access & Inclusion, Integrity, Innovation, Collaboration, Sustainability, Impact*), and leadership dialogue section.
 - **`Our Approach` (`/approach` & `/solution`)**: Needs-driven philosophy, four strategic delivery pillars, six flexible solution themes (*Renewable & Clean Energy, Distributed Energy Access, Innovative Business Models, Project Development, Strategic Partnerships, Scalable Infrastructure*), and interactive FAQ accordion.
-- **`Our Impact` (`/impact` & `/who-we-serve`)**: Honest outcome-oriented framework assessing *People & Communities Reached, Improved Electricity Access, Institutions & Businesses Supported, Reliability & Affordability, Environmental & Development Benefits*, plus target beneficiary sector breakdowns (*Education, Healthcare, Productive Enterprise, Communities*).
+- **`Projects` (`/projects`; legacy `/impact` and `/who-we-serve` redirect here)**: Planned initiatives, with honest empty states for ongoing and completed projects.
 - **`Partner With Us` (`/partner`)**: 7 collaboration pathways (*Technical & Technology, Project Development & Implementation, Investors & Financing, Development Organisations, Government & Public Sector, Commercial & Institutional Customers, Community & Civil Society*) with an interactive enquiry form.
-- **`Project Energy Enquiry` (`/projects` & `/schools`)**: Broad questionnaire for institutions, healthcare clinics, businesses, and communities seeking to explore an energy project.
+- **`Energy Requirement Calculator` (`/energy-requirement-calculator`)**: Browser-based preliminary household solar-system sizing estimates.
+- **`Careers` (`/careers`)**: Future recruitment information and current vacancy status.
 - **`Contact` (`/contact`)**: Official communication channels (*Email, WhatsApp, operating jurisdiction, WAT office hours*) and general inquiry form.
 - **`Privacy Policy` (`/privacy`)**: Transparent policy aligned with the Nigeria Data Protection Act (NDPA).
 
