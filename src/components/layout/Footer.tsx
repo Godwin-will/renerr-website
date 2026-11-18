@@ -39,16 +39,16 @@ export const Footer: React.FC = () => {
                 Making Reliable Energy More Accessible.
               </h3>
               <p className="text-sm text-gray-300 mt-1 max-w-xl leading-relaxed">
-                Renerr Energies is developing practical residential and community-based solar
-                solutions to make reliable and affordable electricity more accessible.
+                Renerr develops energy-access projects that connect local electricity needs with
+                diaspora investment and trusted technical expertise.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
               <Link
-                to="/solutions"
+                to="/energy-projects"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] transition-colors text-center shadow-sm"
               >
-                Explore RENERR
+                Explore Energy Projects
               </Link>
               <Link
                 to="/partner"
@@ -72,9 +72,9 @@ export const Footer: React.FC = () => {
               through practical energy solutions designed around local needs.
             </p>
             <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300 max-w-sm">
-              <span className="font-semibold text-brand-accent">Platform in development: </span>
-              RENERR is being designed to connect people to energy opportunities and simplify
-              participation in shared energy services.
+              <span className="font-semibold text-brand-accent">Energy access: </span>
+              Renerr coordinates project development so households and businesses can access
+              reliable electricity through appropriate energy services.
             </div>
           </div>
 
@@ -91,9 +91,9 @@ export const Footer: React.FC = () => {
               </li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
-              <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link to="/energy-requirement-calculator" className="hover:text-white transition-colors">Energy Requirement Calculator</Link></li>
-              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/professionals" className="hover:text-white transition-colors">Find a Solar Professional</Link></li>
+              <li><Link to="/energy-projects" className="hover:text-white transition-colors">Explore Energy Projects</Link></li>
+              <li><Link to="/partner" className="hover:text-white transition-colors">Partner With Us</Link></li>
               <li>
                 <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
               </li>

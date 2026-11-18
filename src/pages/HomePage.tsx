@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Users,
@@ -7,11 +7,22 @@ import {
   GraduationCap,
   Sun,
   HeartHandshake,
-  Smartphone,
   TrendingUp,
+  BadgeCheck,
 } from 'lucide-react';
+import { getMarketplace } from '../utils/marketplaceApi';
+
+type PreviewProject = { id:string; slug:string; title:string; city?:string; state?:string; country:string; category:string; capacity_kw?:number };
+type PreviewPro = { id:string; slug:string; full_name:string; title:string; city?:string; state?:string; country:string; verified:boolean };
 
 export const HomePage: React.FC = () => {
+  const [projects,setProjects]=useState<PreviewProject[]>([]);
+  const [professionals,setProfessionals]=useState<PreviewPro[]>([]);
+  const [marketplaceError,setMarketplaceError]=useState('');
+  useEffect(()=>{
+    getMarketplace<{projects:PreviewProject[]}>('projects').then(x=>setProjects((x.projects||[]).slice(0,3))).catch((e:Error)=>setMarketplaceError(e.message));
+    getMarketplace<{professionals:PreviewPro[]}>('professionals').then(x=>setProfessionals((x.professionals||[]).slice(0,3))).catch((e:Error)=>setMarketplaceError(e.message));
+  },[]);
   return (
     <div className="space-y-0">
       {/* ======================================================== */}
@@ -32,26 +43,25 @@ export const HomePage: React.FC = () => {
               </h1>
 
               <p className="text-base sm:text-lg text-brand-charcoal/80 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                Renerr Energies is developing practical residential and community-based solar
-                solutions designed around the energy needs, participation and realities of the people
-                we serve.
+                Renerr connects energy needs, diaspora investment and trusted technical expertise to
+                expand access to reliable electricity across Africa.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link
-                  to="/solutions"
+                  to="/energy-projects"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] shadow-sm transition-all duration-200 hover:shadow-md hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
-                  <span>Explore RENERR</span>
+                  <span>Explore Energy Projects</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
                 <Link
-                  to="/partner"
+                  to="/professionals"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-brand-dark bg-white border border-brand-dark/15 hover:border-brand-primary hover:bg-brand-light/50 transition-all duration-200 shadow-sm flex items-center justify-center gap-2"
                 >
-                  <span>Partner With Us</span>
+                  <span>Find a Solar Professional</span>
                 </Link>
               </div>
 
@@ -63,7 +73,7 @@ export const HomePage: React.FC = () => {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-brand-primary" />
-                  Community-Based Solutions
+                  Diaspora-Powered Projects
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
@@ -106,8 +116,8 @@ export const HomePage: React.FC = () => {
 
           <p className="text-base sm:text-lg text-brand-charcoal/80 leading-relaxed max-w-2xl mx-auto">
             For many households and businesses, the cost of accessing reliable electricity remains a
-            major challenge. Renerr is developing residential and community-based solar solutions
-            around local energy requirements and practical access needs.
+            major challenge. Renerr develops viable clean-energy projects and connects them with
+            diaspora investment, while helping people find trusted technical expertise.
           </p>
         </div>
       </section>
@@ -125,66 +135,58 @@ export const HomePage: React.FC = () => {
               A Smarter Way to Access Energy.
             </h2>
             <p className="text-sm sm:text-base text-brand-muted">
-              We are developing practical energy solutions through household planning, community
-              coordination and project development.
+              We connect energy needs, investment opportunities and trusted technical services.
             </p>
           </div>
 
-          {/* Three Simple Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1: Community energy solutions */}
-            <div className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Link to="/energy-projects" className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary flex items-center justify-center">
                   <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-brand-dark">Community-Based Energy</h3>
+                <h3 className="text-xl font-bold text-brand-dark">Diaspora-Powered Energy Projects</h3>
                 <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  Renerr is developing shared solar-plus-battery solutions for technically suitable
-                  groups of nearby households.
+                  Renerr assesses local electricity needs, develops viable clean-energy projects and
+                  connects approved opportunities with diaspora investment interest.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>In development</span>
+                <span>Explore Energy Projects</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </Link>
 
             {/* Card 2: Residential energy planning */}
-            <div className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
+            <Link to="/professionals" className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary flex items-center justify-center">
                   <Sun className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-brand-dark">Residential Energy Planning</h3>
+                <h3 className="text-xl font-bold text-brand-dark">Trusted Solar Professionals</h3>
                 <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  We help households consider their daily energy needs, backup duration and suitable
-                  solar, battery and inverter capacities.
+                  Find solar installation professionals and service providers for system design,
+                  installation, inspection and maintenance.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>Plan your requirements</span>
+                <span>Find a Solar Professional</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </Link>
+          </div>
+        </div>
+      </section>
 
-            {/* Card 3: Technology-Enabled Access */}
-            <div className="p-8 rounded-3xl bg-white border border-brand-dark/10 shadow-sm hover:border-brand-primary/40 transition-all space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-primary flex items-center justify-center">
-                  <Smartphone className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-brand-dark">Technology-Enabled Access</h3>
-                <p className="text-sm text-brand-charcoal/80 leading-relaxed">
-                  Our approach combines technical assessment, solution design, project coordination
-                  and appropriate technology.
-                </p>
-              </div>
-              <div className="pt-4 border-t border-brand-dark/10 text-xs font-semibold text-brand-primary flex items-center gap-1">
-                <span>Energy access development</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </div>
-            </div>
+      <section className="py-16 sm:py-20 bg-white border-b border-brand-dark/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+          <div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Energy project marketplace</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Explore Energy Projects</h2><p className="mt-2 text-sm text-brand-muted">Only projects approved for publication appear here.</p>
+            {projects.length>0?<div className="mt-5 space-y-3">{projects.map(p=><Link key={p.id} to={`/energy-projects/${p.slug}`} className="block rounded-xl border border-brand-dark/10 p-4 hover:border-brand-primary/40"><p className="font-bold text-brand-dark">{p.title}</p><p className="mt-1 text-xs text-brand-muted">{[p.city,p.state,p.country].filter(Boolean).join(', ')} · {p.category}{p.capacity_kw?` · ${p.capacity_kw} kW`:''}</p></Link>)}</div>:<p className="mt-5 rounded-xl bg-brand-cream p-4 text-sm text-brand-muted">{marketplaceError?'Marketplace listings are not connected yet.': 'Published project opportunities will appear here when available.'}</p>}
+            <Link to="/energy-projects" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">View All Energy Projects <ArrowRight size={16}/></Link>
+          </div>
+          <div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Trusted technical expertise</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Find a Solar Professional</h2><p className="mt-2 text-sm text-brand-muted">Professionals are listed only after application review and verification.</p>
+            {professionals.length>0?<div className="mt-5 space-y-3">{professionals.map(p=><Link key={p.id} to={`/professionals/${p.slug}`} className="flex items-center gap-3 rounded-xl border border-brand-dark/10 p-4 hover:border-brand-primary/40"><span className="grid h-10 w-10 place-items-center rounded-full bg-brand-light text-brand-primary font-bold">{p.full_name.split(/\s+/).slice(0,2).map(x=>x[0]).join('')}</span><span><span className="block font-bold text-brand-dark">{p.full_name}</span><span className="block text-xs text-brand-muted">{p.title} · {[p.city,p.state,p.country].filter(Boolean).join(', ')}</span>{p.verified&&<span className="mt-1 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800"><BadgeCheck size={12}/>Renerr Verified Professional</span>}</span></Link>)}</div>:<p className="mt-5 rounded-xl bg-brand-cream p-4 text-sm text-brand-muted">{marketplaceError?'Professional listings are not connected yet.':'Verified professionals will appear here as profiles are approved.'}</p>}
+            <Link to="/professionals" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">Find a Solar Professional <ArrowRight size={16}/></Link>
           </div>
         </div>
       </section>
@@ -225,18 +227,18 @@ export const HomePage: React.FC = () => {
               </div>
               <h3 className="text-lg font-bold text-brand-dark">Developing Practical Solutions</h3>
               <p className="text-sm text-brand-muted leading-relaxed">
-                We are developing residential and community-based energy approaches intended to
-                improve access to reliable and affordable electricity.
+                We are developing energy-access projects that connect local needs with investment
+                and qualified technical delivery partners.
               </p>
             </div>
           </div>
 
           <div className="pt-2">
             <Link
-              to="/projects"
+              to="/energy-projects"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-white border border-brand-dark/15 text-brand-dark hover:border-brand-primary hover:bg-brand-light/50 transition-all shadow-sm"
             >
-              <span>Explore Projects</span>
+              <span>Explore Energy Projects</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

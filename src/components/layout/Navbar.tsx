@@ -26,9 +26,9 @@ export const Navbar: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Solutions', path: '/solutions' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Energy Requirement Calculator', path: '/energy-requirement-calculator' },
-    { name: 'Careers', path: '/careers' },
+    { name: 'Find a Solar Professional', path: '/professionals' },
+    { name: 'Explore Energy Projects', path: '/energy-projects' },
+    { name: 'Partner With Us', path: '/partner' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -70,10 +70,10 @@ export const Navbar: React.FC = () => {
             {/* Desktop Actions: Prominent Green "Explore RENERR" Button */}
             <div className="hidden xl:flex items-center gap-3">
               <Link
-              to="/solutions"
+              to="/energy-projects"
                 className="px-5 py-2.5 text-sm font-bold text-brand-dark bg-brand-accent hover:bg-[#a6dc70] rounded-xl shadow-sm transition-all duration-200 hover:shadow-md hover:scale-[1.02] flex items-center gap-2 whitespace-nowrap"
               >
-                <span>Explore RENERR</span>
+                <span>Explore Energy Projects</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -81,10 +81,10 @@ export const Navbar: React.FC = () => {
             {/* Mobile / Tablet Menu Button */}
             <div className="xl:hidden flex items-center gap-2">
               <Link
-                to="/solutions"
+                to="/energy-projects"
                 className="px-3.5 py-1.5 text-xs font-bold text-brand-dark bg-brand-accent rounded-lg shadow-sm"
               >
-                Explore RENERR
+                Explore Energy Projects
               </Link>
               <button
                 type="button"
@@ -125,10 +125,10 @@ export const Navbar: React.FC = () => {
               {/* Mobile Action Button */}
               <div className="pt-4 border-t border-brand-dark/10">
                 <Link
-                  to="/solutions"
+                  to="/energy-projects"
                   className="w-full py-3.5 px-4 rounded-xl text-center text-sm font-bold bg-brand-accent text-brand-dark hover:bg-[#a6dc70] flex items-center justify-center gap-2 shadow-sm"
                 >
-                  <span>Explore RENERR</span>
+                  <span>Explore Energy Projects</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

@@ -4,7 +4,12 @@ import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
-import { ProjectsPage } from './pages/ProjectsPage';
+import { EnergyProjectsPage } from './pages/EnergyProjectsPage';
+import { EnergyProjectDetailsPage } from './pages/EnergyProjectDetailsPage';
+import { ProfessionalsPage } from './pages/ProfessionalsPage';
+import { ProfessionalProfilePage } from './pages/ProfessionalProfilePage';
+import { JoinProfessionalPage } from './pages/JoinProfessionalPage';
+import { AdminPage } from './pages/AdminPage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { CareersPage } from './pages/CareersPage';
 import { EnergyCalculatorPage } from './pages/EnergyCalculatorPage';
@@ -21,12 +26,18 @@ export const App: React.FC = () => {
           {/* Main navigation pages */}
           <Route index element={<HomePage />} />
           <Route path="solutions" element={<SolutionsPage />} />
-          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="projects" element={<Navigate to="/energy-projects" replace />} />
+          <Route path="energy-projects" element={<EnergyProjectsPage />} />
+          <Route path="energy-projects/:slug" element={<EnergyProjectDetailsPage />} />
+          <Route path="professionals" element={<ProfessionalsPage />} />
+          <Route path="professionals/:slug" element={<ProfessionalProfilePage />} />
+          <Route path="join-as-professional" element={<JoinProfessionalPage />} />
+          <Route path="admin" element={<AdminPage />} />
           <Route path="energy-requirement-calculator" element={<EnergyCalculatorPage />} />
           <Route path="careers" element={<CareersPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
-          <Route path="impact" element={<Navigate to="/projects" replace />} />
+          <Route path="impact" element={<Navigate to="/energy-projects" replace />} />
           <Route path="partner" element={<PartnerPage />} />
           <Route path="contact" element={<ContactPage />} />
 
@@ -38,7 +49,7 @@ export const App: React.FC = () => {
           <Route path="energy-solutions" element={<Navigate to="/solutions" replace />} />
           <Route path="solution" element={<Navigate to="/solutions" replace />} />
           <Route path="approach" element={<Navigate to="/how-it-works" replace />} />
-          <Route path="who-we-serve" element={<Navigate to="/projects" replace />} />
+          <Route path="who-we-serve" element={<Navigate to="/energy-projects" replace />} />
           <Route path="schools" element={<Navigate to="/contact" replace />} />
 
           {/* 404 Fallback */}

@@ -8,7 +8,10 @@ import { usePageMeta } from '../../utils/usePageMeta';
 const pageMeta: Record<string, { title: string; description: string }> = {
   '/': { title: 'Renerr Energies | Reliable Energy Access', description: 'Renerr Energies is developing practical residential and community-based solar solutions to make reliable and affordable electricity more accessible across Africa.' },
   '/solutions': { title: 'Solutions | Renerr Energies', description: 'Learn about Renerr’s residential and community-based solar energy approaches.' },
-  '/projects': { title: 'Projects | Renerr Energies', description: 'Explore initiatives Renerr is developing to expand access to reliable and affordable energy.' },
+  '/energy-projects': { title: 'Energy Projects | Renerr Energies', description: 'Explore assessed energy access projects and express interest in published opportunities.' },
+  '/professionals': { title: 'Find a Solar Professional | Renerr Energies', description: 'Find verified solar energy professionals and request services.' },
+  '/join-as-professional': { title: 'Join the Solar Professionals Directory | Renerr Energies', description: 'Apply to join Renerr’s solar professionals directory.' },
+  '/admin': { title: 'Marketplace Administration | Renerr Energies', description: 'Manage Renerr marketplace listings and enquiries.' },
   '/energy-requirement-calculator': { title: 'Energy Requirement Calculator | Renerr Energies', description: 'Estimate daily household electricity use and preliminary solar, battery and inverter requirements.' },
   '/careers': { title: 'Careers | Renerr Energies', description: 'Learn about future career opportunities with Renerr Energies.' },
   '/contact': { title: 'Contact | Renerr Energies', description: 'Contact Renerr Energies about energy access solutions, projects and partnerships.' },
