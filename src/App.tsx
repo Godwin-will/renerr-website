@@ -5,10 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
 import { EnergyProjectsPage } from './pages/EnergyProjectsPage';
-import { EnergyProjectDetailsPage } from './pages/EnergyProjectDetailsPage';
 import { ProfessionalsPage } from './pages/ProfessionalsPage';
-import { ProfessionalProfilePage } from './pages/ProfessionalProfilePage';
-import { JoinProfessionalPage } from './pages/JoinProfessionalPage';
 import { AdminPage } from './pages/AdminPage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { CareersPage } from './pages/CareersPage';
@@ -28,10 +25,10 @@ export const App: React.FC = () => {
           <Route path="solutions" element={<SolutionsPage />} />
           <Route path="projects" element={<Navigate to="/energy-projects" replace />} />
           <Route path="energy-projects" element={<EnergyProjectsPage />} />
-          <Route path="energy-projects/:slug" element={<EnergyProjectDetailsPage />} />
+          <Route path="energy-projects/:slug" element={<Navigate to="/energy-projects" replace />} />
           <Route path="professionals" element={<ProfessionalsPage />} />
-          <Route path="professionals/:slug" element={<ProfessionalProfilePage />} />
-          <Route path="join-as-professional" element={<JoinProfessionalPage />} />
+          <Route path="professionals/:slug" element={<Navigate to="/professionals" replace />} />
+          <Route path="join-as-professional" element={<Navigate to="/professionals#interest-form" replace />} />
           <Route path="admin" element={<AdminPage />} />
           <Route path="energy-requirement-calculator" element={<EnergyCalculatorPage />} />
           <Route path="careers" element={<CareersPage />} />

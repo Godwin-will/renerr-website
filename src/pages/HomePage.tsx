@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Users,
@@ -8,21 +8,9 @@ import {
   Sun,
   HeartHandshake,
   TrendingUp,
-  BadgeCheck,
 } from 'lucide-react';
-import { getMarketplace } from '../utils/marketplaceApi';
-
-type PreviewProject = { id:string; slug:string; title:string; city?:string; state?:string; country:string; category:string; capacity_kw?:number };
-type PreviewPro = { id:string; slug:string; full_name:string; title:string; city?:string; state?:string; country:string; verified:boolean };
 
 export const HomePage: React.FC = () => {
-  const [projects,setProjects]=useState<PreviewProject[]>([]);
-  const [professionals,setProfessionals]=useState<PreviewPro[]>([]);
-  const [marketplaceError,setMarketplaceError]=useState('');
-  useEffect(()=>{
-    getMarketplace<{projects:PreviewProject[]}>('projects').then(x=>setProjects((x.projects||[]).slice(0,3))).catch((e:Error)=>setMarketplaceError(e.message));
-    getMarketplace<{professionals:PreviewPro[]}>('professionals').then(x=>setProfessionals((x.professionals||[]).slice(0,3))).catch((e:Error)=>setMarketplaceError(e.message));
-  },[]);
   return (
     <div className="space-y-0">
       {/* ======================================================== */}
@@ -179,15 +167,9 @@ export const HomePage: React.FC = () => {
       </section>
 
       <section className="py-16 sm:py-20 bg-white border-b border-brand-dark/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
-          <div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Energy project marketplace</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Explore Energy Projects</h2><p className="mt-2 text-sm text-brand-muted">Only projects approved for publication appear here.</p>
-            {projects.length>0?<div className="mt-5 space-y-3">{projects.map(p=><Link key={p.id} to={`/energy-projects/${p.slug}`} className="block rounded-xl border border-brand-dark/10 p-4 hover:border-brand-primary/40"><p className="font-bold text-brand-dark">{p.title}</p><p className="mt-1 text-xs text-brand-muted">{[p.city,p.state,p.country].filter(Boolean).join(', ')} · {p.category}{p.capacity_kw?` · ${p.capacity_kw} kW`:''}</p></Link>)}</div>:<p className="mt-5 rounded-xl bg-brand-cream p-4 text-sm text-brand-muted">{marketplaceError?'Marketplace listings are not connected yet.': 'Published project opportunities will appear here when available.'}</p>}
-            <Link to="/energy-projects" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">View All Energy Projects <ArrowRight size={16}/></Link>
-          </div>
-          <div><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Trusted technical expertise</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Find a Solar Professional</h2><p className="mt-2 text-sm text-brand-muted">Professionals are listed only after application review and verification.</p>
-            {professionals.length>0?<div className="mt-5 space-y-3">{professionals.map(p=><Link key={p.id} to={`/professionals/${p.slug}`} className="flex items-center gap-3 rounded-xl border border-brand-dark/10 p-4 hover:border-brand-primary/40"><span className="grid h-10 w-10 place-items-center rounded-full bg-brand-light text-brand-primary font-bold">{p.full_name.split(/\s+/).slice(0,2).map(x=>x[0]).join('')}</span><span><span className="block font-bold text-brand-dark">{p.full_name}</span><span className="block text-xs text-brand-muted">{p.title} · {[p.city,p.state,p.country].filter(Boolean).join(', ')}</span>{p.verified&&<span className="mt-1 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800"><BadgeCheck size={12}/>Renerr Verified Professional</span>}</span></Link>)}</div>:<p className="mt-5 rounded-xl bg-brand-cream p-4 text-sm text-brand-muted">{marketplaceError?'Professional listings are not connected yet.':'Verified professionals will appear here as profiles are approved.'}</p>}
-            <Link to="/professionals" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">Find a Solar Professional <ArrowRight size={16}/></Link>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+          <div className="rounded-2xl border border-brand-dark/10 bg-brand-cream p-6 sm:p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Energy project marketplace</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Explore Energy Projects</h2><p className="mt-2 text-sm text-brand-muted">Our energy project marketplace is in development. Register your interest to hear about future opportunities.</p><Link to="/energy-projects" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">Register Interest <ArrowRight size={16}/></Link></div>
+          <div className="rounded-2xl border border-brand-dark/10 bg-brand-cream p-6 sm:p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-primary">Trusted technical expertise</p><h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-brand-dark">Find a Solar Professional</h2><p className="mt-2 text-sm text-brand-muted">Our trusted professional network is coming soon. Customers and qualified professionals can register their interest.</p><Link to="/professionals" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-primary">Register Interest <ArrowRight size={16}/></Link></div>
         </div>
       </section>
 
